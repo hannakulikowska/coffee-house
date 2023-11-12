@@ -1,0 +1,65 @@
+.header {
+  @include flex(row, space-between, center);
+  margin-bottom: 20px;
+
+  .header__logo {
+    width: 100px;
+    height: 60px;
+  }
+
+  .nav__list {
+    @include flex(row, center, center);
+    gap: 40px;
+    transform: translateY(-1px);
+    letter-spacing: .3px;
+
+    .nav__item {
+      height: 28px;
+
+      &:hover > .nav-link:after {
+        @extend %underline-hover;
+      }
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: $text-dark;
+      position: relative;
+      line-height: 150%;
+
+      &:after {
+        @include font(16px, 150%);
+        @extend %underline;
+      }
+      
+      @each $state in $states {
+        &:#{$state} {
+          color: $text-dark;
+        }
+      }
+    }
+  }
+
+  .header__menu {
+    height: 28px;
+    @include flex(row, center, flex-start);
+    gap: 8px;
+    transform: translateY(-2px);
+
+    &:hover:after {
+      @extend %underline-hover;
+    }
+
+    &:after {
+      @extend %underline;
+      transform: translateY(-6px);
+    }
+
+    a {
+      line-height: 150%; /* 24px */
+      transform: translateY(1px);
+      color: $text-dark;
+      letter-spacing: 0.3px;
+    }
+  }
+}

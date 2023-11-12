@@ -1,0 +1,116 @@
+.header .header__menu:after, .header .nav__list .nav-link:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0px;
+  height: 2px;
+  background: #403F3D;
+  transition: all 0.45s;
+}
+
+.header .header__menu:hover:after, .header .nav__list .nav__item:hover > .nav-link:after {
+  width: 100%;
+  left: 0;
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background-color: #E1D4C9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header .header__logo {
+  width: 100px;
+  height: 60px;
+}
+.header .nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  transform: translateY(-1px);
+  letter-spacing: 0.3px;
+}
+.header .nav__list .nav__item {
+  height: 28px;
+}
+.header .nav__list .nav-link {
+  text-decoration: none;
+  color: #403F3D;
+  position: relative;
+  line-height: 150%;
+}
+.header .nav__list .nav-link:after {
+  font-size: 16px;
+  line-height: 150%;
+}
+.header .nav__list .nav-link:hover {
+  color: #403F3D;
+}
+.header .nav__list .nav-link:active {
+  color: #403F3D;
+}
+.header .nav__list .nav-link:visited {
+  color: #403F3D;
+}
+.header .header__menu {
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  transform: translateY(-2px);
+}
+.header .header__menu:after {
+  transform: translateY(-6px);
+}
+.header .header__menu a {
+  line-height: 150%; /* 24px */
+  transform: translateY(1px);
+  color: #403F3D;
+  letter-spacing: 0.3px;
+}
+
+.container {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 40px 40px;
+}/*# sourceMappingURL=style.css.map */

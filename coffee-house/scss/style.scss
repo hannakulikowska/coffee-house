@@ -1,0 +1,52 @@
+@import "mixins";
+
+// variables
+$text-dark: #403F3D;
+$text-light: #E1D4C9;
+$text-accent: #B0907A;
+$bg-body: #E1D4C9;
+$bg-container: #665F55;
+$bg-backdrop: #403F3DCC;
+$states: hover, active, visited;
+
+// placeholders
+%underline {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0px;
+  height: 2px;
+  background: $text-dark;
+  transition: all 0.45s;
+}
+
+%underline-hover {
+  width: 100%;
+  left: 0;
+}
+
+// fonts
+@font-face {
+  @include inter600;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  @include inter600;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-style: italic;
+}
+
+@import "null";
+
+@import "header";
+
+.container {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 40px 40px;
+}
+
+@import "footer";

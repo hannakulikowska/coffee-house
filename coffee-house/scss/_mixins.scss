@@ -1,6 +1,6 @@
-@mixin inter600 {
+@mixin inter($font-weight) {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: $font-weight;
 }
 
 @mixin font($fsz, $lh) {

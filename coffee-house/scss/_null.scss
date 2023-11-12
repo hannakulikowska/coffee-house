@@ -5,8 +5,8 @@
 }
 
 body {
-  @include inter600;
-  background-color: $bg-body;
+  @include inter(600);
+  background-color: $background-body;
 }
 
 ul {

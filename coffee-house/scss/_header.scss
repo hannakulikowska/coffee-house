@@ -1,13 +1,13 @@
 .header {
   @include flex(row, space-between, center);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
-  .header__logo {
+  &__logo {
     width: 100px;
     height: 60px;
   }
 
-  .nav__list {
+  &__nav {
     @include flex(row, center, center);
     gap: 40px;
     transform: translateY(-1px);
@@ -40,7 +40,7 @@
     }
   }
 
-  .header__menu {
+  &__menu {
     height: 28px;
     @include flex(row, center, flex-start);
     gap: 8px;
@@ -62,4 +62,21 @@
       letter-spacing: 0.3px;
     }
   }
+}
+
+// placeholders
+%underline {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0px;
+  height: 2px;
+  background: $text-dark;
+  transition: all 0.45s;
+}
+
+%underline-hover {
+  width: 100%;
+  left: 0;
 }

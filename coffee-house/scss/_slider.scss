@@ -6,9 +6,11 @@
   border: 1px solid $border-dark;
   cursor: pointer;
   transition: all 0.7s ease;
+
   &:hover {
     background-color: $background-container;
   }
+
   &:hover svg path {
     stroke: $text-light;
   }
@@ -33,7 +35,7 @@ svg path {
   align-items: center;
   gap: 40px;
   align-self: stretch;
-      
+
   &__container {
     display: flex;
     width: 1152px;

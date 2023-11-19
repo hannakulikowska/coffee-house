@@ -1,4 +1,4 @@
-@import "mixins";
+@import "_mixins.scss";
 
 // variables
 $text-dark: #403F3D;
@@ -28,7 +28,7 @@ $states: hover, active, visited;
   font-style: italic;
 }
 
-@import "null";
+@import "_null.scss";
 
 .container {
   width: 1440px;
@@ -53,7 +53,8 @@ main {
   }
 }
 
-@import "header";
-@import "enjoy";
-@import "slider";
-@import "footer";
+@import "_header.scss";
+@import "_enjoy.scss";
+@import "_slider.scss";
+@import "_about.scss";
+@import "_footer.scss";

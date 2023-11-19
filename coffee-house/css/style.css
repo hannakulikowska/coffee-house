@@ -309,4 +309,55 @@ svg path {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+}
+.gallery__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.column__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column__box img {
+  transition: all 1s ease;
+}
+.column__box:hover img {
+  scale: 0.9;
+}
+
+.box--large {
+  border-radius: 20px;
+  width: 660px;
+  height: 590px;
+  overflow: hidden;
+}
+
+.box--small {
+  border-radius: 20px;
+  width: 660px;
+  height: 430px;
+  overflow: hidden;
+}
+
+.title {
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

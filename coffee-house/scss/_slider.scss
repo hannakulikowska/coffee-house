@@ -1,0 +1,120 @@
+.arrow {
+  @include flex(row, center, center);
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  &:hover {
+    background-color: $background-container;
+  }
+  &:hover svg path {
+    stroke: $text-light;
+  }
+}
+
+svg path {
+  transition: all 0.7s ease;
+}
+
+.favorite {
+  display: flex;
+  max-width: 1360px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+      
+  &__container {
+    display: flex;
+    width: 1152px;
+    min-width: 480px;
+    max-width: 1162px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__slide {
+    width: 480px;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__slide--inactive {
+    display: none;
+  }
+
+  &__slide-description {
+    color: $text-dark;
+    @include inter(400);
+    @include font(16px, 150%);
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  &__slide-image {
+    width: 480px;
+    height: 480px;
+    margin-bottom: 4px;
+  }
+
+  &__slide-price {
+    color: $text-dark;
+    @include inter(600);
+    @include font(24px, 125%);
+  }
+
+  &__slide-title {
+    align-self: stretch;
+    color: $text-dark;
+    @include inter(600);
+    @include font(24px, 125%);
+    font-style: normal;
+    text-align: center;
+  }
+
+  &__slides {
+    // display: flex;
+    // min-width: 480px;
+    // max-width: 1152px;
+    // justify-content: flex-end;
+    // align-items: flex-start;
+    // flex: 1 0 0;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  &__control {
+    width: 40px;
+    height: 4px;
+    border-radius: 100px;
+    background: $border-light;
+  }
+
+  .control--active {
+    background: $border-dark;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}

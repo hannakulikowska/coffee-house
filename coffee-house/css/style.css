@@ -1,18 +1,21 @@
 @font-face {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  font-style: normal;
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
   font-style: normal;
 }
 @font-face {
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  font-style: normal;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
   font-style: normal;
 }
 @font-face {
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  font-style: normal;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
   font-style: italic;
 }
@@ -25,6 +28,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  font-style: normal;
   background-color: #E1D4C9;
 }
 
@@ -42,6 +46,25 @@ a {
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 125%;
+  text-align: center;
+  color: #403F3D;
+}
+.title span {
+  font-style: italic;
+  color: #B0907A;
 }
 
 .header {
@@ -121,36 +144,44 @@ a {
   left: 0;
 }
 
-.banner {
-  max-width: 100%;
+.enjoy {
+  width: 100%;
   height: 644px;
   background: url(../assets/img/img-hero.jpg) lightgray 50%/cover no-repeat;
   border-radius: 40px;
   padding: 100px;
 }
-.banner__content {
+
+.banner {
   width: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  font-weight: 400;
-  color: #E1D4C9;
+  align-self: stretch;
 }
 .banner__title {
-  align-self: stretch;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 72px;
   line-height: 105%;
+  font-style: normal;
+  color: #E1D4C9;
 }
 .banner__title span {
   color: #B0907A;
   font-style: italic;
-  font-feature-settings: "clig" off, "liga" off;
 }
 .banner__description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.5px;
+  color: #E1D4C9;
 }
 .banner__button {
   width: 200px;
@@ -160,8 +191,122 @@ a {
   padding: 20px 78px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  font-style: normal;
   font-size: 16px;
   line-height: 170%;
   color: #403F3D;
-  font-feature-settings: "clig" off, "liga" off;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.arrow:hover {
+  background-color: #665F55;
+}
+.arrow:hover svg path {
+  stroke: #E1D4C9;
+}
+
+svg path {
+  transition: all 0.7s ease;
+}
+
+.favorite {
+  display: flex;
+  max-width: 1360px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+.slider__container {
+  display: flex;
+  width: 1152px;
+  min-width: 480px;
+  max-width: 1162px;
+  flex-direction: column;
+  align-items: center;
+}
+.slider__slide {
+  width: 480px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.slider__slide--inactive {
+  display: none;
+}
+.slider__slide-description {
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.slider__slide-image {
+  width: 480px;
+  height: 480px;
+  margin-bottom: 4px;
+}
+.slider__slide-price {
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 125%;
+}
+.slider__slide-title {
+  align-self: stretch;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 125%;
+  font-style: normal;
+  text-align: center;
+}
+.controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.controls__control {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background: #C1B6AD;
+}
+.controls .control--active {
+  background: #665F55;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }/*# sourceMappingURL=style.css.map */

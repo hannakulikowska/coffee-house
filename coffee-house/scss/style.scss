@@ -6,6 +6,8 @@ $text-light: #E1D4C9;
 $text-accent: #B0907A;
 $background-body: #E1D4C9;
 $background-container: #665F55;
+$border-dark: #665F55;
+$border-light: #C1B6AD;
 $background-backdrop: #403F3DCC;
 $states: hover, active, visited;
 
@@ -35,6 +37,23 @@ $states: hover, active, visited;
   padding: 20px 40px 40px;
 }
 
+main {
+  @include flex (column, flex-start, center);
+  gap: 100px;
+}
+
+.title {
+  @include font (60px, 125%);
+  text-align: center;
+  color: $text-dark;
+
+  & span {
+    font-style: italic;
+    color: $text-accent;
+  }
+}
+
 @import "header";
 @import "enjoy";
+@import "slider";
 @import "footer";

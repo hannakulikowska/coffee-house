@@ -360,4 +360,87 @@ svg path {
 
 .title {
   text-align: left;
+}
+
+.mobile-app {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex: 1 0 0;
+}
+.mobile-app img {
+  width: 630px;
+  height: 630px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1 0 0;
+}
+.offer p {
+  align-self: stretch;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.offer__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.offer__button {
+  display: flex;
+  width: 200px;
+  height: 64px;
+  padding: 0px 20px;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #403F3D;
+  transition: all 1s ease;
+}
+.offer__button svg {
+  transition: all 1s ease;
+}
+.offer__button:hover {
+  background-color: #665F55;
+  border: 1px solid #665F55;
+}
+.offer__button:hover .button__text {
+  color: #E1D4C9;
+}
+
+.button--app-store:hover svg path {
+  fill: #E1D4C9;
+}
+
+.button--google-play:hover svg path {
+  fill: #E1D4C9;
+}
+
+.button__text {
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: left;
+}
+.button__text .text--available {
+  font-size: 10px;
+  line-height: 140%;
+}
+.button__text .text--platform {
+  font-size: 16px;
+  line-height: 150%;
 }/*# sourceMappingURL=style.css.map */

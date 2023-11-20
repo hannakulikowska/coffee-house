@@ -368,6 +368,7 @@ svg path {
   justify-content: center;
   align-items: center;
   gap: 100px;
+  margin-bottom: 100px;
   flex: 1 0 0;
 }
 .mobile-app img {
@@ -441,6 +442,121 @@ svg path {
   line-height: 140%;
 }
 .button__text .text--platform {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.footer {
+  display: flex;
+  max-width: 1360px;
+  padding: 100px;
+  border-radius: 40px;
+  background: #665F55;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  align-self: stretch;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1 0 0;
+}
+
+.title--light {
+  color: #E1D4C9;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.socials__icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid #C1B6AD;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+}
+.socials__icon svg path {
+  transition: all 0.7s ease-in-out;
+}
+.socials__icon:hover {
+  background: #E1D4C9;
+}
+.socials__icon:hover svg path {
+  stroke: #403F3D;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1 0 0;
+  color: #E1D4C9;
+  align-self: stretch;
+}
+.contacts-info__title {
+  font-size: 24px;
+  line-height: 125%;
+}
+.contacts-info__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+}
+.contacts-info__contacts .item--underline {
+  width: 10px;
+  height: 2px;
+  background: #E1D4C9;
+  opacity: 0;
+  transition: all 0.7s ease;
+  transform: translateX(-50%);
+}
+
+.contacts__item a:hover + .item--underline {
+  display: block;
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.contacts__item svg {
+  margin-bottom: 5px;
+}
+.contacts__item a {
+  text-decoration: none;
+  color: #E1D4C9;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item--open-hours {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 16px;
   line-height: 150%;
 }/*# sourceMappingURL=style.css.map */

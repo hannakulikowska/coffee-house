@@ -5,14 +5,14 @@
   &__logo {
     width: 100px;
     height: 60px;
+    cursor: default;
   }
 
   &__nav {
     @include flex(row, center, center);
-    gap: 40px;
-    transform: translateY(-1px);
-    letter-spacing: .3px;
-
+    gap: 41px;
+    margin-top: -5px;
+    
     .nav__item {
       height: 28px;
 
@@ -22,6 +22,7 @@
     }
 
     .nav-link {
+      @include inter(600);
       text-decoration: none;
       color: $text-dark;
       position: relative;
@@ -43,8 +44,8 @@
   &__menu {
     height: 28px;
     @include flex(row, center, flex-start);
+    @include inter(600);
     gap: 8px;
-    transform: translateY(-2px);
 
     &:hover:after {
       @extend %underline-hover;
@@ -57,9 +58,13 @@
 
     a {
       line-height: 150%; /* 24px */
-      transform: translateY(1px);
+      margin-top: -2px;
       color: $text-dark;
-      letter-spacing: 0.3px;
+    }
+
+    svg {
+      margin-top: -2px;
+      transform: translateX(1px);
     }
   }
 }

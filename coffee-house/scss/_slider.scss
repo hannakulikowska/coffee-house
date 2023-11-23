@@ -2,6 +2,7 @@
   @include flex(row, center, center);
   width: 60px;
   height: 60px;
+  background-color: $background-body;
   border-radius: 100px;
   border: 1px solid $border-dark;
   cursor: pointer;
@@ -63,7 +64,6 @@ svg path {
     @include inter(400);
     @include font(16px, 150%);
     text-align: center;
-    letter-spacing: 0.5px;
   }
 
   &__slide-image {
@@ -85,15 +85,6 @@ svg path {
     @include font(24px, 125%);
     font-style: normal;
     text-align: center;
-  }
-
-  &__slides {
-    // display: flex;
-    // min-width: 480px;
-    // max-width: 1152px;
-    // justify-content: flex-end;
-    // align-items: flex-start;
-    // flex: 1 0 0;
   }
 }
 

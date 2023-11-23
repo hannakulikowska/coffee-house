@@ -1,4 +1,4 @@
-@import "_mixins.scss";
+@import "mixins";
 
 // variables
 $text-dark: #403F3D;
@@ -11,24 +11,13 @@ $border-light: #C1B6AD;
 $background-backdrop: #403F3DCC;
 $states: hover, active, visited;
 
-// fonts
-@font-face {
-  @include inter(400);
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-style: normal;
-}
-@font-face {
-  @include inter(600);
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-style: normal;
-}
-@font-face {
-  @include inter(600);
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-@import "_null.scss";
+@import "null";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
   width: 1440px;
@@ -43,6 +32,7 @@ main {
 }
 
 .title {
+  @include inter(600);
   @include font (60px, 125%);
   text-align: center;
   color: $text-dark;
@@ -53,9 +43,10 @@ main {
   }
 }
 
-@import "_header.scss";
-@import "_enjoy.scss";
-@import "_slider.scss";
-@import "_about.scss";
-@import "_mobile-app.scss";
-@import "_footer.scss";
+@import "header";
+@import "enjoy";
+@import "slider";
+@import "about";
+@import "mobile-app";
+@import "footer";
+

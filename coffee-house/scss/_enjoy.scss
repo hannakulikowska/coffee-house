@@ -15,7 +15,7 @@
   &__title {
     @include inter(600);
     @include font(72px, 105%);
-    font-style: normal;
+    text-align: left;
     color: $text-light;
 
     span {
@@ -27,18 +27,42 @@
   &__description {
     @include inter(400);
     @include font(16px, 150%);
-    letter-spacing: 0.5px;
     color: $text-light;
   }
 
   &__button {
     width: 200px;
     height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     border-radius: 100px;
     background: $background-body;
-    padding: 20px 78px;
+    text-decoration: none;
+    padding: 20px;
     @include inter(600);
     @include font(16px, 170%);
     color: $text-dark;
+    margin-top: 1px;
+
+    span {
+      transform: translateX(14px);
+      margin-top: 1px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    svg {
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
   }
+}
+
+.banner__button:hover span {
+  transform: translateX(0);
+}
+
+.banner__button:hover svg {
+  opacity: 1;
 }

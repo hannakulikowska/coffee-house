@@ -1,24 +1,4 @@
-@font-face {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-style: italic;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +6,6 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   background-color: #E1D4C9;
 }
 
@@ -39,6 +16,10 @@ ul {
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -57,6 +38,8 @@ main {
 }
 
 .title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   font-size: 60px;
   line-height: 125%;
   text-align: center;
@@ -77,20 +60,22 @@ main {
 .header__logo {
   width: 100px;
   height: 60px;
+  cursor: default;
 }
 .header__nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  transform: translateY(-1px);
-  letter-spacing: 0.3px;
+  gap: 41px;
+  margin-top: -5px;
 }
 .header__nav .nav__item {
   height: 28px;
 }
 .header__nav .nav-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   text-decoration: none;
   color: #403F3D;
   position: relative;
@@ -115,17 +100,21 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   gap: 8px;
-  transform: translateY(-2px);
 }
 .header__menu:after {
   transform: translateY(-6px);
 }
 .header__menu a {
   line-height: 150%; /* 24px */
-  transform: translateY(1px);
+  margin-top: -2px;
   color: #403F3D;
-  letter-spacing: 0.3px;
+}
+.header__menu svg {
+  margin-top: -2px;
+  transform: translateX(1px);
 }
 
 .header__nav .nav-link:after, .header__menu:after {
@@ -164,10 +153,9 @@ main {
 .banner__title {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 72px;
   line-height: 105%;
-  font-style: normal;
+  text-align: left;
   color: #E1D4C9;
 }
 .banner__title span {
@@ -177,24 +165,44 @@ main {
 .banner__description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0.5px;
   color: #E1D4C9;
 }
 .banner__button {
   width: 200px;
   height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   border-radius: 100px;
   background: #E1D4C9;
-  padding: 20px 78px;
+  text-decoration: none;
+  padding: 20px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 16px;
   line-height: 170%;
   color: #403F3D;
+  margin-top: 1px;
+}
+.banner__button span {
+  transform: translateX(14px);
+  margin-top: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.banner__button svg {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.banner__button:hover span {
+  transform: translateX(0);
+}
+
+.banner__button:hover svg {
+  opacity: 1;
 }
 
 .arrow {
@@ -204,6 +212,7 @@ main {
   align-items: center;
   width: 60px;
   height: 60px;
+  background-color: #E1D4C9;
   border-radius: 100px;
   border: 1px solid #665F55;
   cursor: pointer;
@@ -259,11 +268,9 @@ svg path {
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  letter-spacing: 0.5px;
 }
 .slider__slide-image {
   width: 480px;
@@ -274,7 +281,6 @@ svg path {
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 24px;
   line-height: 125%;
 }
@@ -283,12 +289,12 @@ svg path {
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 24px;
   line-height: 125%;
   font-style: normal;
   text-align: center;
 }
+
 .controls {
   display: flex;
   align-items: flex-start;
@@ -388,7 +394,6 @@ svg path {
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 150%;
 }
@@ -409,10 +414,10 @@ svg path {
   gap: 8px;
   text-decoration: none;
   color: #403F3D;
-  transition: all 1s ease;
+  transition: all 0.7s ease-in-out;
 }
 .offer__button svg {
-  transition: all 1s ease;
+  transform: translateX(-1px);
 }
 .offer__button:hover {
   background-color: #665F55;
@@ -431,11 +436,14 @@ svg path {
 }
 
 .button__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-style: normal;
-  text-align: left;
 }
 .button__text .text--available {
   font-size: 10px;
@@ -501,10 +509,12 @@ svg path {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 39px;
   flex: 1 0 0;
   color: #E1D4C9;
   align-self: stretch;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 .contacts-info__title {
   font-size: 24px;
@@ -516,6 +526,7 @@ svg path {
   justify-content: center;
   align-items: flex-start;
   gap: 14px;
+  margin-bottom: 6px;
 }
 .contacts-info__contacts .item--underline {
   width: 10px;
@@ -538,9 +549,6 @@ svg path {
   flex-direction: column;
   align-items: center;
   gap: 4px;
-}
-.contacts__item svg {
-  margin-bottom: 5px;
 }
 .contacts__item a {
   text-decoration: none;

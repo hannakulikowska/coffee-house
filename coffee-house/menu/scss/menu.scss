@@ -1,0 +1,86 @@
+@import '../node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import "mixins";
+
+// variables
+$text-dark: #403F3D;
+$text-light: #E1D4C9;
+$text-accent: #B0907A;
+$background-body: #E1D4C9;
+$background-container: #665F55;
+$border-dark: #665F55;
+$border-light: #C1B6AD;
+$background-backdrop: #403F3DCC;
+$states: hover, active, visited;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-body;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.container {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  @include inter(600);
+  @include font (60px, 125%);
+  text-align: center;
+  color: $text-dark;
+  margin-bottom: 40px;
+  
+  & span {
+    font-style: italic;
+    color: $text-accent;
+  }
+}
+
+.heading-3 {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.medium {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@import "header";
+@import "menu-cards";
+@import "footer";

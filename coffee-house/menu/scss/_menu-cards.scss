@@ -1,11 +1,10 @@
 .menu {
-  // display: flex;
-  // max-width: 1360px;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: flex-start;
-  // gap: 40px;
-  // align-self: stretch;
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
   &__tabs {
     display: flex;
     justify-content: center;
@@ -18,6 +17,7 @@
     font-weight: 600;
     line-height: 150%;
     font-feature-settings: 'clig' off, 'liga' off;
+    margin-bottom: 38px;
 
     &--active {
       color: $text-light;
@@ -66,4 +66,93 @@
 .tabs-icon.inactive svg rect {
   fill: #C1B6AD;
 }
-   
+
+
+//! CARDS
+
+.cards-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+
+  &__card {
+    display: flex;
+    width: 310px;
+    height: 506px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid $border-light;
+  }
+}
+
+.card {
+  &__image {
+    display: flex;
+    width: 100%;
+    height: 310px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 40px;
+
+    & span {
+      width: 340px;
+      height: 340px;
+      flex-shrink: 0;
+    }
+
+    .coffee-1 {
+      background: url(/assets/img/coffee-1.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-2 {
+      background: url(/assets/img/coffee-2.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-3 {
+      background: url(/assets/img/coffee-3.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-4 {
+      background: url(/assets/img/coffee-4.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-5 {
+      background: url(/assets/img/coffee-5.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-6 {
+      background: url(/assets/img/coffee-6.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-7 {
+      background: url(/assets/img/coffee-7.jpg), lightgray 50% / cover no-repeat;
+    }
+    .coffee-8 {
+      background: url(/assets/img/coffee-8.jpg), lightgray 50% / cover no-repeat;
+    }
+  }
+
+  &__description {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    gap: 12px;
+
+    &--title {
+      color: $text-dark;
+    }
+
+    &--content {
+      color: $text-dark;
+      margin-bottom: auto;
+    }
+
+    &--price {
+      color: $text-dark;
+    }
+  }
+}
+

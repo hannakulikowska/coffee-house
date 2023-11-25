@@ -97,11 +97,19 @@ svg path {
     width: 40px;
     height: 4px;
     border-radius: 100px;
-    background: $border-light;
+    transition: all 0.7s ease-in-out;
   }
 
   .control--active {
     background: $border-dark;
+  }
+
+  .control--inactive {
+    background: $border-light;
+
+    &:hover {
+      background: $border-dark;
+    }
   }
 }
 

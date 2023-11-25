@@ -85,7 +85,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .menu__wrapper {
@@ -346,7 +346,7 @@ svg path {
   transition: all 1s ease;
 }
 .column__box:hover img {
-  scale: 0.9;
+  scale: 0.92;
 }
 
 .box--large {

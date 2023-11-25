@@ -1,5 +1,5 @@
 .menu {
-  margin-bottom: 100px;
+  margin-bottom: 101px;
 
   &__title {
     margin-bottom: 38px;
@@ -17,7 +17,7 @@
     font-weight: 600;
     line-height: 150%;
     font-feature-settings: 'clig' off, 'liga' off;
-    margin-bottom: 38px;
+    margin-bottom: 39px;
 
     &--active {
       color: $text-light;
@@ -85,6 +85,11 @@
     align-items: center;
     border-radius: 40px;
     border: 1px solid $border-light;
+    cursor: pointer;
+
+    &:hover .card__image span {
+      scale: 0.92;
+    }
   }
 }
 
@@ -103,6 +108,7 @@
       width: 340px;
       height: 340px;
       flex-shrink: 0;
+      transition: all 0.7s ease;
     }
 
     .coffee-1 {
@@ -133,7 +139,7 @@
 
   &__description {
     display: flex;
-    padding: 20px;
+    padding: 21px 20px 20px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -152,6 +158,8 @@
 
     &--price {
       color: $text-dark;
+      line-height: 100%;
+      
     }
   }
 }

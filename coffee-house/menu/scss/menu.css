@@ -10,6 +10,7 @@ html {
 
 body {
   background-color: #E1D4C9;
+  margin: 0;
 }
 
 ul {
@@ -92,7 +93,7 @@ ul {
   color: #403F3D;
   font-weight: 600;
   line-height: 150%;
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 .header__menu::after {
   content: "";
@@ -149,12 +150,6 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%;
-  font-feature-settings: "clig" off, "liga" off;
   margin-bottom: 39px;
 }
 .menu__tabs--active {
@@ -168,6 +163,13 @@ ul {
   align-items: center;
   gap: 8px;
 }
+.menu__tabs--active span {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
 .menu__tabs--inactive {
   color: #403F3D;
   background: #E1D4C9;
@@ -179,6 +181,13 @@ ul {
   align-items: center;
   gap: 8px;
   transition: all 0.7s ease-in-out;
+}
+.menu__tabs--inactive span {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
 }
 .menu__tabs--inactive svg rect {
   transition: all 0.7s ease-in-out;
@@ -237,28 +246,28 @@ ul {
   transition: all 0.7s ease;
 }
 .card__image .coffee-1 {
-  background: url(/assets/img/coffee-1.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-1.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-2 {
-  background: url(/assets/img/coffee-2.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-2.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-3 {
-  background: url(/assets/img/coffee-3.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-3.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-4 {
-  background: url(/assets/img/coffee-4.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-4.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-5 {
-  background: url(/assets/img/coffee-5.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-5.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-6 {
-  background: url(/assets/img/coffee-6.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-6.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-7 {
-  background: url(/assets/img/coffee-7.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-7.jpg), lightgray 50%/cover no-repeat;
 }
 .card__image .coffee-8 {
-  background: url(/assets/img/coffee-8.jpg), lightgray 50%/cover no-repeat;
+  background: url(../../assets/img/coffee-8.jpg), lightgray 50%/cover no-repeat;
 }
 .card__description {
   display: flex;

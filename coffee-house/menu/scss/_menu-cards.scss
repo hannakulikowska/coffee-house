@@ -10,13 +10,6 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
-    
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    font-feature-settings: 'clig' off, 'liga' off;
     margin-bottom: 39px;
 
     &--active {
@@ -29,6 +22,14 @@
       justify-content: center;
       align-items: center;
       gap: 8px;
+
+      & span {
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+      }
     }
     
     &--inactive {
@@ -42,6 +43,14 @@
       align-items: center;
       gap: 8px;
       transition: all 0.7s ease-in-out;
+
+      & span {
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+      }
 
       & svg rect {
         transition: all 0.7s ease-in-out;
@@ -112,28 +121,28 @@
     }
 
     .coffee-1 {
-      background: url(/assets/img/coffee-1.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-1.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-2 {
-      background: url(/assets/img/coffee-2.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-2.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-3 {
-      background: url(/assets/img/coffee-3.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-3.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-4 {
-      background: url(/assets/img/coffee-4.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-4.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-5 {
-      background: url(/assets/img/coffee-5.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-5.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-6 {
-      background: url(/assets/img/coffee-6.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-6.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-7 {
-      background: url(/assets/img/coffee-7.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-7.jpg), lightgray 50% / cover no-repeat;
     }
     .coffee-8 {
-      background: url(/assets/img/coffee-8.jpg), lightgray 50% / cover no-repeat;
+      background: url(../../assets/img/coffee-8.jpg), lightgray 50% / cover no-repeat;
     }
   }
 

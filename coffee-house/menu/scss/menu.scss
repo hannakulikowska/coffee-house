@@ -13,6 +13,9 @@ $border-light: #C1B6AD;
 $background-backdrop: #403F3DCC;
 $states: hover, active, visited;
 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 380px;
+
 * {
   box-sizing: border-box;
 }
@@ -44,7 +47,8 @@ ul {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
+  min-width: 256px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
@@ -83,5 +87,6 @@ ul {
 }
 
 @import "header";
+@import "burger-menu";
 @import "menu-cards";
 @import "footer";

@@ -11,6 +11,9 @@ $border-light: #C1B6AD;
 $background-backdrop: #403F3DCC;
 $states: hover, active, visited;
 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 380px;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 @import "null";
@@ -20,7 +23,8 @@ html {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
+  min-width: 256px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
@@ -44,9 +48,18 @@ main {
 }
 
 @import "header";
+@import "burger-menu";
 @import "enjoy";
 @import "slider";
 @import "about";
 @import "mobile-app";
 @import "footer";
 
+
+.enjoy,
+.favorite,
+.about,
+.mobile-app,
+.footer {
+  display: none;
+}

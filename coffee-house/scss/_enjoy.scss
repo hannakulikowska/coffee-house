@@ -4,10 +4,14 @@
   background: url(../assets/img/img-hero.jpg) lightgray 50% / cover no-repeat;
   border-radius: 40px;
   padding: 100px;
+
+  @media all and (max-width: $breakpoint-tablet) {
+    padding: 100px 60px;
+  }
 }
 
 .banner {
-  width: 530px;
+  max-width: 530px;
   @include flex(column, center, flex-start);
   gap: 40px;
   align-self: stretch;
@@ -47,14 +51,20 @@
     margin-top: 1px;
 
     span {
-      transform: translateX(14px);
       margin-top: 1px;
       transition: all 0.5s ease-in-out;
+
+      @media all and (min-width: calc($breakpoint-tablet + 1px)) {
+        transform: translateX(14px);
+      }
     }
 
-    svg {
-      opacity: 0;
+    svg { 
       transition: all 0.5s ease-in-out;
+
+      @media all and (min-width: calc($breakpoint-tablet + 1px)) {
+        opacity: 0;
+      }
     }
   }
 }
@@ -66,3 +76,5 @@
 .banner__button:hover svg {
   opacity: 1;
 }
+
+

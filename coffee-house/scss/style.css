@@ -183,9 +183,14 @@ main {
   border-radius: 40px;
   padding: 100px;
 }
+@media all and (max-width: 768px) {
+  .enjoy {
+    padding: 100px 60px;
+  }
+}
 
 .banner {
-  width: 530px;
+  max-width: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,13 +236,21 @@ main {
   margin-top: 1px;
 }
 .banner__button span {
-  transform: translateX(14px);
   margin-top: 1px;
   transition: all 0.5s ease-in-out;
 }
+@media all and (min-width: 769px) {
+  .banner__button span {
+    transform: translateX(14px);
+  }
+}
 .banner__button svg {
-  opacity: 0;
   transition: all 0.5s ease-in-out;
+}
+@media all and (min-width: 769px) {
+  .banner__button svg {
+    opacity: 0;
+  }
 }
 
 .banner__button:hover span {
@@ -617,7 +630,6 @@ svg path {
   line-height: 150%;
 }
 
-.enjoy,
 .favorite,
 .about,
 .mobile-app,

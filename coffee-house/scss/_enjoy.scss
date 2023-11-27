@@ -44,7 +44,6 @@
     @include inter(600);
     @include font(16px, 170%);
     color: $text-dark;
-    margin-top: 1px;
 
     span {
       transform: translateX(14px);

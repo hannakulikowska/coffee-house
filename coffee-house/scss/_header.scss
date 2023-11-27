@@ -38,21 +38,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 41px;
     margin-bottom: -1px;
   }
 }
 
 .menu__wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 9px;
-
   a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 9px;
     text-decoration: none;
     color: $text-dark;
-    transform: translateY(2px);
+
+    span {
+      transform: translateY(2px);
+    }
   }
 }
 

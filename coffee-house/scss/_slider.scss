@@ -1,19 +1,20 @@
 .arrow {
   @include flex(row, center, center);
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   background-color: $background-body;
   border-radius: 100px;
   border: 1px solid $border-dark;
   cursor: pointer;
   transition: all 0.7s ease;
 
-  &:hover {
-    background-color: $background-container;
-  }
-
-  &:hover svg path {
-    stroke: $text-light;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $background-container;
+    }
+    &:hover svg path {
+      stroke: $text-light;
+    }
   }
 }
 
@@ -36,19 +37,18 @@ svg path {
   align-items: center;
   gap: 40px;
   align-self: stretch;
+  width: 100%;
 
   &__container {
     display: flex;
-    width: 1152px;
-    min-width: 480px;
-    max-width: 1162px;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
   }
 
   &__slide {
-    width: 480px;
-    max-width: 480px;
+    // width: 480px;
+    // max-width: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,20 +62,20 @@ svg path {
   &__slide-description {
     color: $text-dark;
     @include inter(400);
-    @include font(16px, 150%);
+    @include font(16px, 149%);
     text-align: center;
   }
 
   &__slide-image {
     width: 480px;
     height: 480px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   &__slide-price {
     color: $text-dark;
     @include inter(600);
-    @include font(24px, 125%);
+    @include font(24px, 124%);
   }
 
   &__slide-title {
@@ -106,9 +106,10 @@ svg path {
 
   .control--inactive {
     background: $border-light;
-
-    &:hover {
-      background: $border-dark;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $border-dark;
+      }
     }
   }
 }
@@ -118,4 +119,5 @@ svg path {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  width: 100%;
 }

@@ -8,6 +8,12 @@
   align-items: center;
   gap: 100px;
   align-self: stretch;
+
+  @media screen and (width < 900px) {
+    flex-direction: column;
+    padding: 100px 60px 98px;
+    gap: 101px;
+  }
 }
 
 // Left Block
@@ -44,12 +50,13 @@
       transition: all 0.7s ease-in-out;
     }
 
-    &:hover {
-      background: $background-body;
-    }
-
-    &:hover svg path {
-      stroke: $text-dark;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $background-body;
+      }
+      &:hover svg path {
+        stroke: $text-dark;
+      }
     }
   }
 }
@@ -89,13 +96,14 @@
   }
 }
 
-.contacts__item a:hover + .item--underline {
-  display: block;
-  width: 100%;
-  transform: translateX(0);
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .contacts__item a:hover + .item--underline {
+    display: block;
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
 
 .contacts__item {
   display: flex;
@@ -108,7 +116,7 @@
     color: $text-light;
     @include font(16px, 150%);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 }

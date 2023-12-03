@@ -48,7 +48,6 @@
     @include inter(600);
     @include font(16px, 170%);
     color: $text-dark;
-    margin-top: 1px;
 
     span {
       margin-top: 1px;
@@ -69,12 +68,12 @@
   }
 }
 
-.banner__button:hover span {
-  transform: translateX(0);
+@media (hover: hover) and (pointer: fine) {
+  .banner__button:hover span {
+    transform: translateX(0);
+  }
+
+  .banner__button:hover svg {
+    opacity: 1;
+  }
 }
-
-.banner__button:hover svg {
-  opacity: 1;
-}
-
-

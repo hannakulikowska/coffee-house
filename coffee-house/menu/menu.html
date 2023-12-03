@@ -7,14 +7,10 @@
   <link rel="stylesheet" type="text/css" href="../node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="scss/menu.css">
   <link rel="icon" type="image/png" href="../assets/favicon/favicon.png">
-  <!-- <link type="image/x-icon" href="../assets/ico/favicon. ico" rel="shortcut icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
-  <link rel="manifest" href="../assets/ico/site.webmanifest"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inter?styles=29141" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -78,7 +74,7 @@
     <main>
 
       <section class="menu">
-        <h1 class="menu__title title">Behind each of our cups<br> hides an <span>amazing surprise</span></h1>
+        <h1 class="menu__title title">Behind each of our cups hides an <span>amazing surprise</span></h1>
         <div class="menu__tabs">
           <button class="menu__tabs--active active">
             <svg class="tabs-icon active" width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +157,7 @@
               <p class="card__description--price heading-3">$5.00</p>
             </div>
           </li>
-          <li class="cards-menu__card">
+          <li class="cards-menu__card hidden">
             <div class="card__image"><span class="coffee-5"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Espresso</h3>
@@ -169,7 +165,7 @@
               <p class="card__description--price heading-3">$4.50</p>
             </div>
           </li>
-          <li class="cards-menu__card">
+          <li class="cards-menu__card hidden">
             <div class="card__image"><span class="coffee-6"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Latte</h3>
@@ -177,7 +173,7 @@
               <p class="card__description--price heading-3">$5.50</p>
             </div>
           </li>
-          <li class="cards-menu__card">
+          <li class="cards-menu__card hidden">
             <div class="card__image"><span class="coffee-7"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Latte macchiato</h3>
@@ -185,7 +181,7 @@
               <p class="card__description--price heading-3">$5.50</p>
             </div>
           </li>
-          <li class="cards-menu__card">
+          <li class="cards-menu__card hidden">
             <div class="card__image"><span class="coffee-8"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Coffee with cognac</h3>
@@ -194,6 +190,15 @@
             </div>
           </li>
         </ul>
+
+        <div class="refresh">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+              stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
       </section>
     </main>
 
@@ -205,7 +210,7 @@
       <div class="offer">
         <h2 class="title title--light">
           Sip, Savor, Smile.<br>
-          <span>It's coffee time!</span>
+          <span>It’s coffee time!</span>
         </h2>
         <div class="socials">
           <a class="socials__icon" href="http://twitter.com/" target="_blank" rel="noopener noreferrer">
@@ -215,7 +220,7 @@
                 stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
-          <a class="socials__icon" href="http://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <a class="socials__icon" href="http://instagram.com/" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
                 d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
@@ -226,7 +231,7 @@
               <path d="M17.5 6.51L17.51 6.49889" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
-          <a class="socials__icon" href="http://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <a class="socials__icon" href="http://facebook.com/" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
                 d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"

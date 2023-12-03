@@ -25,10 +25,14 @@ html {
 
 .container {
   max-width: 1440px;
-  min-width: 256px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
+}
+@media screen and (width < 615px) {
+  .container {
+    padding: 20px 16px 40px;
+  }
 }
 
 main {
@@ -37,6 +41,11 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 100px;
+}
+@media screen and (max-width: 380px) {
+  main {
+    gap: 101px;
+  }
 }
 
 .title {
@@ -50,6 +59,11 @@ main {
 .title span {
   font-style: italic;
   color: #B0907A;
+}
+@media screen and (max-width: 734px) {
+  .title {
+    font-size: 32px;
+  }
 }
 
 .header {
@@ -89,7 +103,7 @@ main {
     opacity: 1;
   }
 }
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header__menu {
     display: none;
   }
@@ -101,13 +115,13 @@ main {
   gap: 41px;
   margin-bottom: -1px;
 }
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header__nav {
     display: none;
   }
 }
 
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   nav {
     display: none;
   }
@@ -181,14 +195,39 @@ main {
 
 .enjoy {
   width: 100%;
-  height: 644px;
+  height: auto;
   background: url(../assets/img/img-hero.jpg) lightgray 50%/cover no-repeat;
   border-radius: 40px;
   padding: 100px;
 }
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .enjoy {
     padding: 100px 60px;
+  }
+}
+@media screen and (max-width: 731px) {
+  .enjoy {
+    padding: 60px 50px;
+  }
+}
+@media screen and (max-width: 711px) {
+  .enjoy {
+    padding: 60px 40px;
+  }
+}
+@media screen and (max-width: 691px) {
+  .enjoy {
+    padding: 60px 20px;
+  }
+}
+@media screen and (max-width: 651px) {
+  .enjoy {
+    padding: 60px 16px;
+  }
+}
+@media screen and (max-width: 301px) {
+  .enjoy {
+    padding: 30px 16px;
   }
 }
 
@@ -200,6 +239,11 @@ main {
   align-items: flex-start;
   gap: 40px;
   align-self: stretch;
+}
+@media screen and (max-width: 301px) {
+  .banner {
+    gap: 30px;
+  }
 }
 .banner__title {
   font-family: "Inter", sans-serif;
@@ -213,12 +257,38 @@ main {
   color: #B0907A;
   font-style: italic;
 }
+@media screen and (max-width: 797px) {
+  .banner__title {
+    font-size: 62px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .banner__title {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .banner__title {
+    font-size: 42px;
+    line-height: 113%;
+  }
+}
+@media screen and (max-width: 364px) {
+  .banner__title {
+    font-size: 32px;
+  }
+}
 .banner__description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #E1D4C9;
+}
+@media screen and (max-width: 440px) {
+  .banner__description {
+    line-height: 151%;
+  }
 }
 .banner__button {
   width: 200px;
@@ -237,11 +307,16 @@ main {
   line-height: 170%;
   color: #403F3D;
 }
+@media screen and (max-width: 264px) {
+  .banner__button {
+    width: 100%;
+  }
+}
 .banner__button span {
   margin-top: 1px;
   transition: all 0.5s ease-in-out;
 }
-@media all and (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .banner__button span {
     transform: translateX(14px);
   }
@@ -249,7 +324,7 @@ main {
 .banner__button svg {
   transition: all 0.5s ease-in-out;
 }
-@media all and (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .banner__button svg {
     opacity: 0;
   }
@@ -282,6 +357,11 @@ main {
   }
   .arrow:hover svg path {
     stroke: #E1D4C9;
+  }
+}
+@media screen and (max-width: 734px) {
+  .arrow {
+    display: none;
   }
 }
 
@@ -317,6 +397,7 @@ svg path {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  max-width: 480px;
 }
 .slider__slide--inactive {
   display: none;
@@ -330,9 +411,14 @@ svg path {
   text-align: center;
 }
 .slider__slide-image {
-  width: 480px;
-  height: 480px;
+  width: 100%;
+  height: auto;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 440px) {
+  .slider__slide-image {
+    margin-bottom: 4px;
+  }
 }
 .slider__slide-price {
   color: #403F3D;
@@ -340,6 +426,11 @@ svg path {
   font-weight: 600;
   font-size: 24px;
   line-height: 124%;
+}
+@media screen and (max-width: 440px) {
+  .slider__slide-price {
+    line-height: 123%;
+  }
 }
 .slider__slide-title {
   align-self: stretch;
@@ -402,6 +493,11 @@ svg path {
   max-width: 1360px;
   width: 100%;
 }
+@media screen and (max-width: 380px) {
+  .gallery {
+    margin-top: -1px;
+  }
+}
 .gallery__column {
   display: flex;
   flex-direction: column;
@@ -413,6 +509,11 @@ svg path {
 @media screen and (width < 900px) {
   .gallery__column {
     align-items: center;
+  }
+}
+@media screen and (max-width: 422px) {
+  .gallery__column {
+    min-width: 190px;
   }
 }
 @media screen and (width < 900px) {
@@ -443,6 +544,11 @@ svg path {
 @media screen and (max-width: 768px) {
   .column__box img {
     transform: scale(1.055);
+  }
+}
+@media screen and (max-width: 380px) {
+  .column__box img {
+    transform: scale(1.23);
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -482,6 +588,11 @@ svg path {
     margin-bottom: 96px;
   }
 }
+@media screen and (max-width: 452px) {
+  .mobile-app {
+    gap: 40px;
+  }
+}
 
 .mobiles img {
   max-width: 100%;
@@ -507,6 +618,12 @@ svg path {
   font-size: 16px;
   line-height: 150%;
 }
+@media screen and (max-width: 380px) {
+  .offer p {
+    line-height: 149%;
+    margin-bottom: -1px;
+  }
+}
 @media screen and (max-width: 768px) {
   .offer {
     align-self: flex-start;
@@ -516,6 +633,11 @@ svg path {
 .offer__buttons {
   display: flex;
   gap: 20px;
+}
+@media screen and (max-width: 452px) {
+  .offer__buttons {
+    flex-direction: column;
+  }
 }
 
 .offer__button {
@@ -586,11 +708,22 @@ svg path {
   gap: 100px;
   align-self: stretch;
 }
+@media screen and (width < 1024px) {
+  .footer {
+    padding: 100px 60px 98px;
+  }
+}
 @media screen and (width < 900px) {
   .footer {
     flex-direction: column;
-    padding: 100px 60px 98px;
+    align-items: flex-start;
     gap: 101px;
+  }
+}
+@media screen and (width < 700px) {
+  .footer {
+    padding: 61px 16px 58px;
+    gap: 41px;
   }
 }
 
@@ -611,6 +744,11 @@ svg path {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+@media screen and (width < 700px) {
+  .socials {
+    margin-top: -1px;
+  }
 }
 .socials__icon {
   display: flex;

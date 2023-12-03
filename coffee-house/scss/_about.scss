@@ -18,6 +18,10 @@
   max-width: 1360px;
   width: 100%;
 
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-top: -1px;
+  }
+
   &__column {
     display: flex;
     flex-direction: column;
@@ -28,6 +32,10 @@
 
     @media screen and (width < 900px) {
       align-items: center;
+    }
+
+    @media screen and (max-width: calc(390px + 32px)) {
+      min-width: 190px;
     }
   }
 
@@ -56,6 +64,9 @@
 
     @media screen and (max-width: $breakpoint-tablet) {
       transform: scale(1.055);
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+      transform: scale(1.23);
     }
   }
 

@@ -12,6 +12,14 @@
     gap: 16px;
     margin-bottom: 39px;
 
+    @media screen and (max-width: calc($breakpoint-mobile + 20px)) {
+      gap: 6px;
+    }
+
+    @media screen and (max-width: 369px) {
+      gap: 16px;
+    }
+
     &--active {
       color: $text-light;
       background: $background-container;
@@ -23,12 +31,20 @@
       align-items: center;
       gap: 8px;
 
+      @media screen and (max-width: 369px) {
+        padding: 1px;
+      }
+
       & span {
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 150%;
+
+        @media screen and (max-width: 369px) {
+          display: none;
+        }
       }
     }
     
@@ -45,12 +61,20 @@
       transition: all 0.7s ease-in-out;
       cursor: pointer;
 
+      @media screen and (max-width: 369px) {
+        padding: 1px;
+      }
+
       & span {
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 150%;
+
+        @media screen and (max-width: 369px) {
+          display: none;
+        }
       }
 
       & svg rect {
@@ -71,11 +95,11 @@
   }
 }
 
-.tabs-icon.active svg rect {
+.tabs--icon.active svg rect {
   fill: #E1D4C9;
 }
 
-.tabs-icon.inactive svg rect {
+.tabs--icon.inactive svg rect {
   fill: #C1B6AD;
 }
 
@@ -92,7 +116,7 @@
   &__card {
     display: flex;
     width: 310px;
-    height: 506px;
+    min-height: 506px;
     flex-direction: column;
     align-items: center;
     border-radius: 40px;
@@ -103,6 +127,10 @@
       &:hover .card__image span {
         scale: 0.92;
       }
+    }
+
+    @media screen and (max-width: 342px) {
+      width: 100%;
     }
   }
 }
@@ -160,6 +188,10 @@
     flex: 1 0 0;
     align-self: stretch;
     gap: 12px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding-left: 19px;
+    }
 
     &--title {
       color: $text-dark;

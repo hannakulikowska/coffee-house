@@ -10,6 +10,10 @@
     flex-direction: column;
     margin-bottom: 96px;
   }
+
+  @media screen and (max-width: calc(420px + 32px)) {
+    gap: 40px;
+  }
 }
 
 .mobiles img {
@@ -33,6 +37,11 @@
     color: $text-dark;
     @include inter(400);
     @include font(16px, 150%);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      line-height: 149%;
+      margin-bottom: -1px;
+    }
   }
 
   @media screen and (max-width: $breakpoint-tablet) {
@@ -43,6 +52,10 @@
 .offer__buttons {
   display: flex;
   gap: 20px;
+
+  @media screen and (max-width: calc(420px + 32px)) {
+    flex-direction: column;
+  }
 }
 
 .offer__button {

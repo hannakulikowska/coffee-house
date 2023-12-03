@@ -25,15 +25,22 @@ html {
 
 .container {
   max-width: 1440px;
-  min-width: 256px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
+
+  @media screen and (width < 615px) {
+    padding: 20px 16px 40px;
+  }
 }
 
 main {
   @include flex (column, flex-start, center);
   gap: 100px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: 101px;
+  }
 }
 
 .title {
@@ -45,6 +52,10 @@ main {
   & span {
     font-style: italic;
     color: $text-accent;
+  }
+
+  @media screen and (max-width: 734px) {
+    font-size: 32px;
   }
 }
 

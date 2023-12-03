@@ -39,7 +39,7 @@
       }
     }
 
-    @media all and (max-width: $breakpoint-tablet) {
+    @media screen and (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
@@ -51,14 +51,14 @@
     gap: 41px;
     margin-bottom: -1px;
 
-    @media all and (max-width: $breakpoint-tablet) {
+    @media screen and (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
 }
 
 nav {
-  @media all and (max-width: $breakpoint-tablet) {
+  @media screen and (max-width: $breakpoint-tablet) {
     display: none;
   }
 }
@@ -84,6 +84,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    
     @media (hover: hover) and (pointer: fine) {
       &:hover .link--underline {
         width: 100%;

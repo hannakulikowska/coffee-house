@@ -49,13 +49,16 @@ ul {
 
 .container {
   max-width: 1440px;
-  min-width: 256px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (width < 615px) {
+    padding: 20px 16px 40px;
+  }
 }
 
 .title {
@@ -68,6 +71,10 @@ ul {
   & span {
     font-style: italic;
     color: $text-accent;
+  }
+
+  @media screen and (max-width: 734px) {
+    font-size: 32px;
   }
 }
 

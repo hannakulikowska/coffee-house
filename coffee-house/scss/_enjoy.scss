@@ -94,7 +94,7 @@
       margin-top: 1px;
       transition: all 0.5s ease-in-out;
 
-      @media screen and (min-width: calc($breakpoint-tablet + 1px)) {
+      @media (hover: hover) and (pointer: fine) {
         transform: translateX(14px);
       }
     }
@@ -102,7 +102,7 @@
     svg { 
       transition: all 0.5s ease-in-out;
 
-      @media screen and (min-width: calc($breakpoint-tablet + 1px)) {
+      @media (hover: hover) and (pointer: fine) {
         opacity: 0;
       }
     }

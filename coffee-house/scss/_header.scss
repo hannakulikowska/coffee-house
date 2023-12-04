@@ -12,6 +12,10 @@
     cursor: none;
   }
 
+  &__wrapper {
+    width: 100%;
+  }
+
   &__logo {
     width: 100px;
     height: 60px;
@@ -28,9 +32,15 @@
     line-height: 150%;
     margin-bottom: 2px;
 
-    &:hover .link--underline {
-      width: 100%;
-      opacity: 1;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover .link--underline {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      display: none;
     }
   }
 
@@ -40,21 +50,16 @@
     align-items: center;
     gap: 41px;
     margin-bottom: -1px;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
 }
 
-.menu__wrapper {
-  a {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 9px;
-    text-decoration: none;
-    color: $text-dark;
-
-    span {
-      transform: translateY(2px);
-    }
+nav {
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: none;
   }
 }
 
@@ -80,9 +85,24 @@
     align-items: center;
     gap: 4px;
 
-    &:hover .link--underline {
-      width: 100%;
-      opacity: 1;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover .link--underline {
+        width: 100%;
+        opacity: 1;
+      }
     }
   }
 }
+
+.menu__wrapper {
+  a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: $text-dark;
+    transform: translateY(2px);
+  }
+}
+

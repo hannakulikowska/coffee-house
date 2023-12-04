@@ -11,9 +11,11 @@ $border-light: #C1B6AD;
 $background-backdrop: #403F3DCC;
 $states: hover, active, visited;
 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 380px;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import url('https://fonts.cdnfonts.com/css/inter');
-
 
 @import "null";
 
@@ -22,15 +24,23 @@ html {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
+
+  @media screen and (width < 615px) {
+    padding: 20px 16px 40px;
+  }
 }
 
 main {
   @include flex (column, flex-start, center);
   gap: 100px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: 101px;
+  }
 }
 
 .title {
@@ -43,12 +53,16 @@ main {
     font-style: italic;
     color: $text-accent;
   }
+
+  @media screen and (max-width: 734px) {
+    font-size: 32px;
+  }
 }
 
 @import "header";
+@import "burger-menu";
 @import "enjoy";
 @import "slider";
 @import "about";
 @import "mobile-app";
 @import "footer";
-

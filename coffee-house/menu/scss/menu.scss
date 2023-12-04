@@ -14,6 +14,9 @@ $border-light: #C1B6AD;
 $background-backdrop: #403F3DCC;
 $states: hover, active, visited;
 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 380px;
+
 * {
   box-sizing: border-box;
 }
@@ -45,13 +48,17 @@ ul {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   height: auto;
   margin: 0 auto;
   padding: 20px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (width < 615px) {
+    padding: 20px 16px 40px;
+  }
 }
 
 .title {
@@ -64,6 +71,10 @@ ul {
   & span {
     font-style: italic;
     color: $text-accent;
+  }
+
+  @media screen and (max-width: 734px) {
+    font-size: 32px;
   }
 }
 
@@ -84,5 +95,6 @@ ul {
 }
 
 @import "header";
+@import "burger-menu";
 @import "menu-cards";
 @import "footer";

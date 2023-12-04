@@ -5,12 +5,20 @@
   align-items: center;
   gap: 100px;
   margin-bottom: 100px;
-  flex: 1 0 0;
 
-  img {
-    width: 630px;
-    height: 630px;
+  @media screen and (width < 900px) {
+    flex-direction: column;
+    margin-bottom: 96px;
   }
+
+  @media screen and (max-width: calc(420px + 32px)) {
+    gap: 40px;
+  }
+}
+
+.mobiles img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .offer {
@@ -18,19 +26,36 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
-  flex: 1 0 0;
+  flex: 1;
+  
+  .title {
+    text-align: left;
+  }
 
   p {
     align-self: stretch;
     color: $text-dark;
     @include inter(400);
     @include font(16px, 150%);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      line-height: 149%;
+      margin-bottom: -1px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    align-self: flex-start;
   }
 }
 
 .offer__buttons {
   display: flex;
   gap: 20px;
+
+  @media screen and (max-width: calc(420px + 32px)) {
+    flex-direction: column;
+  }
 }
 
 .offer__button {
@@ -54,23 +79,35 @@
     transition: fill 0.7s ease;
   }
 
+<<<<<<< HEAD
+  svg path {
+    transition: fill 0.7s ease;
+=======
   &:hover {
     background-color: $background-container;
     border: 1px solid $background-container;
     
+>>>>>>> coffee-house
   }
 
-  &:hover .button__text {
-    color: $text-light;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $background-container;
+      border: 1px solid $background-container;
+    }
+    &:hover .button__text {
+      color: $text-light;
+    }
   }
 }
 
-.button--app-store:hover svg path {
-  fill: $background-body;
-}
-
-.button--google-play:hover svg path {
-  fill: $background-body;
+@media (hover: hover) and (pointer: fine) {
+  .button--app-store:hover svg path {
+    fill: $background-body;
+  }
+  .button--google-play:hover svg path {
+    fill: $background-body;
+  }
 }
 
 .button__text {

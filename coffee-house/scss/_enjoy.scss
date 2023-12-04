@@ -5,21 +5,26 @@
   border-radius: 40px;
   padding: 100px;
 
-  @media screen and (max-width: $breakpoint-tablet) {
+  @media screen and (max-width: 798px) {
     padding: 100px 60px;
   }
+
   @media screen and (max-width: 731px) {
     padding: 60px 50px;
   }
+
   @media screen and (max-width: 711px) {
     padding: 60px 40px;
   }
+
   @media screen and (max-width: 691px) {
     padding: 60px 20px;
   }
+
   @media screen and (max-width: 651px) {
     padding: 60px 16px;
   }
+
   @media screen and (max-width: 301px) {
     padding: 30px 16px;
   }
@@ -34,7 +39,7 @@
   @media screen and (max-width: 301px) {
     gap: 30px;
   }
-  
+
   &__title {
     @include inter(600);
     @include font(72px, 105%);
@@ -46,16 +51,19 @@
       font-style: italic;
     }
 
-    @media screen and (max-width: 797px) {
+    @media screen and (max-width: 767px) {
       font-size: 62px;
     }
+
     @media screen and (max-width: 550px) {
       font-size: 52px;
     }
+
     @media screen and (max-width: 440px) {
       font-size: 42px;
       line-height: 113%;
     }
+
     @media screen and (max-width: 364px) {
       font-size: 32px;
     }
@@ -99,7 +107,7 @@
       }
     }
 
-    svg { 
+    svg {
       transition: all 0.5s ease-in-out;
 
       @media (hover: hover) and (pointer: fine) {

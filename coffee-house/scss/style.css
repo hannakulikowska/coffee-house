@@ -317,7 +317,7 @@ main {
   margin-top: 1px;
   transition: all 0.5s ease-in-out;
 }
-@media screen and (min-width: 769px) {
+@media (hover: hover) and (pointer: fine) {
   .banner__button span {
     transform: translateX(14px);
   }
@@ -325,7 +325,7 @@ main {
 .banner__button svg {
   transition: all 0.5s ease-in-out;
 }
-@media screen and (min-width: 769px) {
+@media (hover: hover) and (pointer: fine) {
   .banner__button svg {
     opacity: 0;
   }
@@ -460,11 +460,6 @@ svg path {
 }
 .controls .control--inactive {
   background: #C1B6AD;
-}
-@media (hover: hover) and (pointer: fine) {
-  .controls .control--inactive:hover {
-    background: #665F55;
-  }
 }
 
 .wrapper {

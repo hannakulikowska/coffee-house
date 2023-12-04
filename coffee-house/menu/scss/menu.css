@@ -171,8 +171,9 @@ ul {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #665F55;
+  cursor: pointer;
 }
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .burger-menu {
     display: flex;
   }
@@ -398,6 +399,7 @@ ul {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #665F55;
+  cursor: pointer;
 }
 
 @media screen and (width < 900px) {

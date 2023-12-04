@@ -115,7 +115,6 @@ main {
   gap: 41px;
   margin-bottom: -1px;
 }
-<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .header__nav {
     display: none;
@@ -126,19 +125,6 @@ main {
   nav {
     display: none;
   }
-=======
-
-.menu__wrapper a {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 9px;
-  text-decoration: none;
-  color: #403F3D;
-}
-.menu__wrapper a span {
-  transform: translateY(2px);
->>>>>>> coffee-house
 }
 
 .nav-link {
@@ -187,8 +173,9 @@ main {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #665F55;
+  cursor: pointer;
 }
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .burger-menu {
     display: flex;
   }
@@ -320,14 +307,11 @@ main {
   font-size: 16px;
   line-height: 170%;
   color: #403F3D;
-<<<<<<< HEAD
 }
 @media screen and (max-width: 264px) {
   .banner__button {
     width: 100%;
   }
-=======
->>>>>>> coffee-house
 }
 .banner__button span {
   margin-top: 1px;
@@ -675,13 +659,9 @@ svg path {
 }
 .offer__button svg path {
   transition: fill 0.7s ease;
-<<<<<<< HEAD
-=======
 }
-.offer__button:hover {
-  background-color: #665F55;
-  border: 1px solid #665F55;
->>>>>>> coffee-house
+.offer__button svg path {
+  transition: fill 0.7s ease;
 }
 @media (hover: hover) and (pointer: fine) {
   .offer__button:hover {

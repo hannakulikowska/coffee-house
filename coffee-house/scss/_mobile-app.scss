@@ -79,15 +79,8 @@
     transition: fill 0.7s ease;
   }
 
-<<<<<<< HEAD
   svg path {
     transition: fill 0.7s ease;
-=======
-  &:hover {
-    background-color: $background-container;
-    border: 1px solid $background-container;
-    
->>>>>>> coffee-house
   }
 
   @media (hover: hover) and (pointer: fine) {

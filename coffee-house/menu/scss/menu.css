@@ -402,7 +402,7 @@ ul {
   cursor: pointer;
 }
 
-@media screen and (width < 900px) {
+@media screen and (max-width: 899px) {
   .cards-menu__card.hidden {
     display: none;
   }
@@ -430,19 +430,19 @@ ul {
   gap: 100px;
   align-self: stretch;
 }
-@media screen and (width < 1024px) {
+@media screen and (max-width: 1023px) {
   .footer {
     padding: 100px 60px 98px;
   }
 }
-@media screen and (width < 900px) {
+@media screen and (max-width: 899px) {
   .footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 101px;
   }
 }
-@media screen and (width < 700px) {
+@media screen and (max-width: 699px) {
   .footer {
     padding: 61px 16px 58px;
     gap: 41px;
@@ -470,7 +470,7 @@ ul {
   align-items: center;
   gap: 12px;
 }
-@media screen and (width < 700px) {
+@media screen and (max-width: 699px) {
   .socials {
     margin-top: -1px;
   }

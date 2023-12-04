@@ -9,17 +9,17 @@
   gap: 100px;
   align-self: stretch;
 
-  @media screen and (width < 1024px) {
+  @media screen and (max-width: 1023px) {
     padding: 100px 60px 98px;
   }
 
-  @media screen and (width < 900px) {
+  @media screen and (max-width: 899px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 101px;
   }
 
-  @media screen and (width < 700px) {
+  @media screen and (max-width: 699px) {
     padding: 61px 16px 58px;
     gap: 41px;
   }
@@ -45,7 +45,7 @@
   align-items: center;
   gap: 12px;
 
-  @media screen and (width < 700px) {
+  @media screen and (max-width: 699px) {
     margin-top: -1px;
   }
 
@@ -67,6 +67,7 @@
       &:hover {
         background: $background-body;
       }
+
       &:hover svg path {
         stroke: $text-dark;
       }
@@ -110,7 +111,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .contacts__item a:hover + .item--underline {
+  .contacts__item a:hover+.item--underline {
     display: block;
     width: 100%;
     transform: translateX(0);

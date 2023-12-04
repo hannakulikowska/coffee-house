@@ -6,7 +6,7 @@
   gap: 100px;
   margin-bottom: 100px;
 
-  @media screen and (width < 900px) {
+  @media screen and (max-width: 899px) {
     flex-direction: column;
     margin-bottom: 96px;
   }
@@ -27,7 +27,7 @@
   align-items: flex-start;
   gap: 40px;
   flex: 1;
-  
+
   .title {
     text-align: left;
   }
@@ -73,8 +73,9 @@
 
   svg {
     transform: translateX(-1px);
-    
+
   }
+
   svg path {
     transition: fill 0.7s ease;
   }
@@ -88,6 +89,7 @@
       background-color: $background-container;
       border: 1px solid $background-container;
     }
+
     &:hover .button__text {
       color: $text-light;
     }
@@ -98,6 +100,7 @@
   .button--app-store:hover svg path {
     fill: $background-body;
   }
+
   .button--google-play:hover svg path {
     fill: $background-body;
   }
@@ -116,6 +119,7 @@
   .text--available {
     @include font(10px, 140%);
   }
+
   .text--platform {
     @include font(16px, 150%);
   }

@@ -84,7 +84,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    
+
     @media (hover: hover) and (pointer: fine) {
       &:hover .link--underline {
         width: 100%;

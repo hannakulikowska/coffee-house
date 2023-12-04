@@ -5,9 +5,24 @@
   border-radius: 40px;
   background: $background-container;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 100px;
   align-self: stretch;
+
+  @media screen and (width < 1024px) {
+    padding: 100px 60px 98px;
+  }
+
+  @media screen and (width < 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 101px;
+  }
+
+  @media screen and (width < 700px) {
+    padding: 61px 16px 58px;
+    gap: 41px;
+  }
 }
 
 // Left Block
@@ -22,7 +37,6 @@
 
   .title {
     text-align: left;
-    margin-bottom: 0;
   }
 }
 
@@ -34,6 +48,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
+
+  @media screen and (width < 700px) {
+    margin-top: -1px;
+  }
 
   &__icon {
     display: flex;
@@ -48,13 +66,14 @@
     svg path {
       transition: all 0.7s ease-in-out;
     }
-
-    &:hover {
-      background: $background-body;
-    }
-
-    &:hover svg path {
-      stroke: $text-dark;
+    
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $background-body;
+      }
+      &:hover svg path {
+        stroke: $text-dark;
+      }
     }
   }
 }
@@ -94,13 +113,14 @@
   }
 }
 
-.contacts__item a:hover + .item--underline {
-  display: block;
-  width: 100%;
-  transform: translateX(0);
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .contacts__item a:hover + .item--underline {
+    display: block;
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
 
 .contacts__item {
   display: flex;
@@ -113,7 +133,7 @@
     color: $text-light;
     @include font(16px, 150%);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 }

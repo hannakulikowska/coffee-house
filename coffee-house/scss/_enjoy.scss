@@ -1,17 +1,40 @@
 .enjoy {
   width: 100%;
-  height: 644px;
+  height: auto;
   background: url(../assets/img/img-hero.jpg) lightgray 50% / cover no-repeat;
   border-radius: 40px;
   padding: 100px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 100px 60px;
+  }
+  @media screen and (max-width: 731px) {
+    padding: 60px 50px;
+  }
+  @media screen and (max-width: 711px) {
+    padding: 60px 40px;
+  }
+  @media screen and (max-width: 691px) {
+    padding: 60px 20px;
+  }
+  @media screen and (max-width: 651px) {
+    padding: 60px 16px;
+  }
+  @media screen and (max-width: 301px) {
+    padding: 30px 16px;
+  }
 }
 
 .banner {
-  width: 530px;
+  max-width: 530px;
   @include flex(column, center, flex-start);
   gap: 40px;
   align-self: stretch;
 
+  @media screen and (max-width: 301px) {
+    gap: 30px;
+  }
+  
   &__title {
     @include inter(600);
     @include font(72px, 105%);
@@ -22,12 +45,30 @@
       color: $text-accent;
       font-style: italic;
     }
+
+    @media screen and (max-width: 797px) {
+      font-size: 62px;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 52px;
+    }
+    @media screen and (max-width: 440px) {
+      font-size: 42px;
+      line-height: 113%;
+    }
+    @media screen and (max-width: 364px) {
+      font-size: 32px;
+    }
   }
 
   &__description {
     @include inter(400);
     @include font(16px, 150%);
     color: $text-light;
+
+    @media screen and (max-width: 440px) {
+      line-height: 151%;
+    }
   }
 
   &__button {
@@ -45,23 +86,35 @@
     @include font(16px, 170%);
     color: $text-dark;
 
-    span {
-      transform: translateX(14px);
-      margin-top: 1px;
-      transition: all 0.5s ease-in-out;
+    @media screen and (max-width: 264px) {
+      width: 100%;
     }
 
-    svg {
-      opacity: 0;
+    span {
+      margin-top: 1px;
       transition: all 0.5s ease-in-out;
+
+      @media screen and (min-width: calc($breakpoint-tablet + 1px)) {
+        transform: translateX(14px);
+      }
+    }
+
+    svg { 
+      transition: all 0.5s ease-in-out;
+
+      @media screen and (min-width: calc($breakpoint-tablet + 1px)) {
+        opacity: 0;
+      }
     }
   }
 }
 
-.banner__button:hover span {
-  transform: translateX(0);
-}
+@media (hover: hover) and (pointer: fine) {
+  .banner__button:hover span {
+    transform: translateX(0);
+  }
 
-.banner__button:hover svg {
-  opacity: 1;
+  .banner__button:hover svg {
+    opacity: 1;
+  }
 }

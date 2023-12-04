@@ -36,6 +36,10 @@
     & svg {
       transform: translateY(-2px);
     }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
 
   &__nav {
@@ -44,6 +48,12 @@
     align-items: center;
     gap: 41px;
     margin-bottom: 1px;
+  }
+}
+
+nav {
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: none;
   }
 }
 
@@ -68,10 +78,12 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
-
-    &:hover .nav-link--underline {
-      width: 100%;
-      opacity: 1;
+    
+    @media (hover: hover) and (pointer: fine) {
+      &:hover .nav-link--underline {
+        width: 100%;
+        opacity: 1;
+      }
     }
   }
 }

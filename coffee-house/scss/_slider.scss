@@ -116,11 +116,6 @@ svg path {
 
   .control--inactive {
     background: $border-light;
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        background: $border-dark;
-      }
-    }
   }
 }
 

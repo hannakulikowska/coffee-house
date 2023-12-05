@@ -461,6 +461,7 @@ ul {
 }
 .offer .title {
   text-align: left;
+  margin-bottom: 0;
 }
 
 .title--light {

@@ -1,2 +1,9 @@
-// deploy: https://rolling-scopes-school.github.io/hannakulikowska-JSFE2023Q4/coffee-house/
-
+document.querySelector('.burger-menu').addEventListener('click', function() {
+  if (this.classList.contains("burger-menu-clicked")) {
+    this.classList.remove("burger-menu-clicked");
+    this.classList.add("burger-menu-closing");
+  } else {
+    this.classList.add("burger-menu-clicked");
+    this.classList.remove("burger-menu-closing");
+  }
+});

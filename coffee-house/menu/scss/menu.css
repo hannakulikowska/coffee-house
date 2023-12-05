@@ -196,7 +196,9 @@ ul {
   margin-bottom: 101px;
 }
 .menu__title {
-  margin-bottom: 38px;
+  display: block;
+  max-width: 855px;
+  margin: 0 auto 38px;
 }
 .menu__tabs {
   display: flex;

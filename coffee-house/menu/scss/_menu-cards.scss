@@ -2,7 +2,9 @@
   margin-bottom: 101px;
 
   &__title {
-    margin-bottom: 38px;
+    display: block;
+    max-width: 855px;
+    margin: 0 auto 38px;
   }
 
   &__tabs {

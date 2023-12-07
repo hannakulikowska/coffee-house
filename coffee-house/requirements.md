@@ -92,15 +92,15 @@
 
 **1. Implementation of the burger menu on both pages: +22**
 
-- [ ] At a page width of 768px or less, the navigation panel hides, and the burger icon appears: +2
-- [ ] When clicking the burger icon, the burger menu slides out from the right, and the burger icon smoothly transforms into a cross: +4
-- [ ] The burger menu occupies the entire available screen area below the <header> block: +2
-- [ ] When clicking the cross, the burger menu smoothly hides, moving to the right of the screen, and the cross smoothly transforms into a burger icon: +4
-- [ ] The burger icon is created using HTML and CSS without the use of images: +2
-- [ ] Links in the burger menu work, providing smooth scrolling to anchor points: +2
+- [x] At a page width of 768px or less, the navigation panel hides, and the burger icon appears: +2
+- [x] When clicking the burger icon, the burger menu slides out from the right, and the burger icon smoothly transforms into a cross: +4
+- [x] The burger menu occupies the entire available screen area below the <header> block: +2
+- [x] When clicking the cross, the burger menu smoothly hides, moving to the right of the screen, and the cross smoothly transforms into a burger icon: +4
+- [x] The burger icon is created using HTML and CSS without the use of images: +2
+- [x] Links in the burger menu work, providing smooth scrolling to anchor points: +2
 - [ ] When clicking on any link (interactive or non-interactive) in the menu, the burger menu smoothly hides to the right, and the cross smoothly transforms into a burger icon: +2
-- [ ] The placement and dimensions of elements in the burger menu match the layout (horizontal centering of menu items): +2
-- [ ] When the page width increases to 769px or higher, the burger icon and the open burger menu hide, and the navigation panel appears: +2
+- [x] The placement and dimensions of elements in the burger menu match the layout (horizontal centering of menu items): +2
+- [x] When the page width increases to 769px or higher, the burger icon and the open burger menu hide, and the navigation panel appears: +2
 
 **2. Implementation of the carousel on the home page: +24**
 
@@ -134,6 +134,6 @@
   
 **5. Video on the `home` page: +8**
    
-- [ ] In the `Enjoy` block of the `home` page, a video is played in the background instead of an image, without sound and control elements, and without the ability to interact with it: +4
-- [ ] After the video is finished, it automatically starts over: +4
+- [x] In the `Enjoy` block of the `home` page, a video is played in the background instead of an image, without sound and control elements, and without the ability to interact with it: +4
+- [x] After the video is finished, it automatically starts over: +4
 

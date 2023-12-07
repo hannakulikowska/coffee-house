@@ -1,7 +1,9 @@
+/*
+* Burger icon
+*/
+
 .burger-menu {
   display: none;
-  width: 44px;
-  height: 44px;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
@@ -10,6 +12,8 @@
 
   @media screen and (max-width: $breakpoint-tablet) {
     display: flex;
+    flex: 0 0 44px;
+    height: 44px;
   }
 
   &__wrapper {
@@ -27,6 +31,11 @@
     background-color: $text-dark;
   }
 }
+
+
+/* 
+* The burger icon smoothly transforms into a cross and returns to its original state
+*/
 
 .burger-menu--clicked {
   .burger-menu__line--top {
@@ -101,5 +110,68 @@
 
   100% {
     transform: translateY(0px) rotate(0deg);
+  }
+}
+
+
+/*
+* Burger menu
+*/
+
+@media screen and (max-width: $breakpoint-tablet) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header .wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    top: 80px;
+    right: -100%;
+    z-index: 4;
+    background-color: $background-body;
+    padding: 77px 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 84px;
+    overflow: auto; // burger-menu scrolling
+    transition: right 0.5s ease;
+
+    @media screen and (max-width: 614px) {
+      padding: 77px 16px;
+    }
+  }
+
+  .header .wrapper.active {
+    right: 0;
+  }
+
+  .header .wrapper .header__nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 46px;
+    margin-bottom: 0;
+  }
+
+  .menu__wrapper a {
+    gap: 16px;
+  }
+
+  .menu__link svg {
+    width: 40px;
+    height: 40px;
+    transform: translateY(-1px);
+  }
+
+  .header {
+    font-size: 32px;
+  }
+
+  .nav__link {
+    line-height: 125%;
   }
 }

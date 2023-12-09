@@ -462,37 +462,6 @@ main {
     opacity: 1;
   }
 }
-.arrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 60px;
-  min-height: 60px;
-  background-color: #E1D4C9;
-  border-radius: 100px;
-  border: 1px solid #665F55;
-  cursor: pointer;
-  transition: all 0.7s ease;
-}
-@media (hover: hover) and (pointer: fine) {
-  .arrow:hover {
-    background-color: #665F55;
-  }
-  .arrow:hover svg path {
-    stroke: #E1D4C9;
-  }
-}
-@media screen and (max-width: 734px) {
-  .arrow {
-    display: none;
-  }
-}
-
-svg path {
-  transition: all 0.7s ease;
-}
-
 .favorite {
   display: flex;
   max-width: 1360px;
@@ -501,30 +470,60 @@ svg path {
   gap: 40px;
   align-self: stretch;
 }
+.favorite .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
 
+/*
+* Slider
+*/
 .slider {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
   align-self: stretch;
   width: 100%;
 }
+@media screen and (max-width: 753px) {
+  .slider {
+    justify-content: center;
+  }
+}
 .slider__container {
+  width: 480px;
+  overflow: hidden;
+}
+@media screen and (max-width: 512px) {
+  .slider__container {
+    flex: 0 1 348px;
+  }
+}
+.slider__slides {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
+  transition: transform 0.5s ease-in-out;
+}
+@media screen and (max-width: 512px) {
+  .slider__slides {
+    width: 1094px;
+  }
 }
 .slider__slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  max-width: 480px;
+  flex: 0 0 auto;
+  width: 480px;
 }
-.slider__slide--inactive {
-  display: none;
+@media screen and (max-width: 512px) {
+  .slider__slide {
+    max-width: 348px;
+  }
 }
 .slider__slide-description {
   color: #403F3D;
@@ -567,6 +566,43 @@ svg path {
   text-align: center;
 }
 
+/*
+* Arrows
+*/
+.arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+  background-color: #E1D4C9;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .arrow:hover {
+    background-color: #665F55;
+  }
+  .arrow:hover svg path {
+    stroke: #E1D4C9;
+  }
+}
+@media screen and (max-width: 753px) {
+  .arrow {
+    display: none;
+  }
+}
+
+svg path {
+  transition: all 0.7s ease;
+}
+
+/*
+* Controls
+*/
 .controls {
   display: flex;
   align-items: flex-start;
@@ -576,23 +612,30 @@ svg path {
   width: 40px;
   height: 4px;
   border-radius: 100px;
-  transition: all 0.7s ease-in-out;
+  overflow: hidden;
 }
 .controls .control--active {
+  display: block;
   background: #665F55;
+  width: 0px;
+  height: 100%;
+  border-radius: 100px;
+}
+.controls .active-animation {
+  animation: progress 5s ease-in-out forwards;
 }
 .controls .control--inactive {
   background: #C1B6AD;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
+@keyframes progress {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 40px;
+  }
 }
-
 .about {
   display: flex;
   flex-direction: column;

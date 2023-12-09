@@ -1,31 +1,3 @@
-.arrow {
-  @include flex(row, center, center);
-  min-width: 60px;
-  min-height: 60px;
-  background-color: $background-body;
-  border-radius: 100px;
-  border: 1px solid $border-dark;
-  cursor: pointer;
-  transition: all 0.7s ease;
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background-color: $background-container;
-    }
-    &:hover svg path {
-      stroke: $text-light;
-    }
-  }
-
-  @media screen and (max-width: 734px) {
-    display: none;
-  }
-}
-
-svg path {
-  transition: all 0.7s ease;
-}
-
 .favorite {
   display: flex;
   max-width: 1360px;
@@ -33,21 +5,50 @@ svg path {
   align-items: center;
   gap: 40px;
   align-self: stretch;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
 }
+
+/*
+* Slider
+*/
 
 .slider {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
   align-self: stretch;
   width: 100%;
 
+  @media screen and (max-width: 753px) {
+    justify-content: center;
+  }
+
+  // ! Slider body
+
   &__container {
+    width: 480px;
+    overflow: hidden;
+
+    @media screen and (max-width: 512px) {
+      flex: 0 1 348px;
+    }
+  }
+
+  &__slides {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
+    transition: transform 0.5s ease-in-out;
+
+    @media screen and (max-width: 512px) {
+      width: 1094px;
+    }
   }
 
   &__slide {
@@ -55,11 +56,14 @@ svg path {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    max-width: 480px;
-  }
 
-  &__slide--inactive {
-    display: none;
+
+    flex: 0 0 auto;
+    width: 480px;
+
+    @media screen and (max-width: 512px) {
+      max-width: 348px;
+    }
   }
 
   &__slide-description {
@@ -73,6 +77,7 @@ svg path {
     width: 100%;
     height: auto;
     margin-bottom: 5px;
+
     @media screen and (max-width: 440px) {
       margin-bottom: 4px;
     }
@@ -98,6 +103,45 @@ svg path {
   }
 }
 
+
+/*
+* Arrows
+*/
+
+.arrow {
+  @include flex(row, center, center);
+  min-width: 60px;
+  min-height: 60px;
+  background-color: $background-body;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  cursor: pointer;
+  transition: all 0.7s ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $background-container;
+    }
+
+    &:hover svg path {
+      stroke: $text-light;
+    }
+  }
+
+  @media screen and (max-width: 753px) {
+    display: none;
+  }
+}
+
+svg path {
+  transition: all 0.7s ease;
+}
+
+
+/*
+* Controls
+*/
+
 .controls {
   display: flex;
   align-items: flex-start;
@@ -107,11 +151,19 @@ svg path {
     width: 40px;
     height: 4px;
     border-radius: 100px;
-    transition: all 0.7s ease-in-out;
+    overflow: hidden;
   }
 
   .control--active {
+    display: block;
     background: $border-dark;
+    width: 0px;
+    height: 100%;
+    border-radius: 100px;
+  }
+
+  .active-animation {
+    animation: progress 5s ease-in-out forwards;
   }
 
   .control--inactive {
@@ -119,10 +171,12 @@ svg path {
   }
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
+@keyframes progress {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 40px;
+  }
 }

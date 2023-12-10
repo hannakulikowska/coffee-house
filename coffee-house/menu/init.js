@@ -1,18 +1,22 @@
 import { displayProducts } from './menu.js';
+import { updateLoadMoreButton } from './load.js';
+
 
 // 1. Chrome
 // import productsJSON from './data/products.json' assert { type: 'json'};
 // console.log(productsJSON);
 
-// 2. Chrome, Mozilla
+// 2. Chrome, Mozilla (fetch)
 fetch('./data/products.json')
   .then((res) => res.json())
   // .then(console.log)
   .then((data) => {
     const products = data;
 
-    const menuTabs = document.querySelectorAll('.menu__tab');
+    // coffee category displays by default
+    displayProducts(products, 'coffee');
 
+    const menuTabs = document.querySelectorAll('.menu__tab');
     // console.log(menuTabs);
     menuTabs.forEach(tab => {
       // Handle Tab click event
@@ -26,12 +30,14 @@ fetch('./data/products.json')
         // console.log('Category:', category);
         // Display products of the selected category
         displayProducts(products, category);
+        
+        document.querySelector('.cards-menu').classList.remove('all-products');
+        updateLoadMoreButton();
       });
     });
-
-    // coffee category displays by default
-    displayProducts(products, 'coffee');
+  
   })
   .catch((error) => {
     console.error('Error loading data:', error);
   });
+  

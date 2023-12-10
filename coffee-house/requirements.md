@@ -118,9 +118,9 @@
 
 - [x] The **Coffee** category is active and the corresponding products are displayed when opening or reloading the `menu` page: +2
 - [x] When switching categories, the products of the selected category are displayed: +2
-- [ ] For screens with a width of 768px or less, when opening/reloading the page or switching categories, only 4 products are displayed. If there are more than 4 products in the displayed category, a **Load More** button is displayed below: +4
-- [ ] When clicking the **Load More** button below the displayed products, the missing products are added, and the **Load More** button is hidden: +4
-- [ ] When changing the screen width, the product display mode (8 products per page or 4 products with a **Load More** button) changes without page reloading: +4
+- [x] For screens with a width of 768px or less, when opening/reloading the page or switching categories, only 4 products are displayed. If there are more than 4 products in the displayed category, a **Load More** button is displayed below: +4
+- [x] When clicking the **Load More** button below the displayed products, the missing products are added, and the **Load More** button is hidden: +4
+- [x] When changing the screen width, the product display mode (8 products per page or 4 products with a **Load More** button) changes without page reloading: +4
 
 **4. The Modal on the `menu` page: +20**
 - [ ] The Modal with the description of a specific product opens when clicking on any part of a card of product: +2

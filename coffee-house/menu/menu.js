@@ -1,3 +1,5 @@
+import { updateLoadMoreButton } from './load.js';
+
 export function displayProducts(products, category) {
   const menuContainer = document.getElementById('menu-container');
   // Clear the container before adding new products
@@ -24,4 +26,30 @@ export function displayProducts(products, category) {
 
     menuContainer.appendChild(card);
   });
+
+
+
+  // Update Load More button
+  updateLoadMoreButton(filteredProducts);
+
+
+  // Initialize the function when the screen width changes - resize event handler
+  window.addEventListener('resize', function () {
+    updateLoadMoreButton(filteredProducts);
+  });
+
+
+
+  // Load More Products
+  function loadMoreProducts() {
+    const loadMoreButton = document.querySelector('.load-more');
+    document.querySelector('.cards-menu').classList.add('all-products');
+    loadMoreButton.style.display = 'none';
+  }
+
+  const loadMoreButton = document.querySelector('.load-more');
+  loadMoreButton.addEventListener('click', function () {
+    loadMoreProducts();
+  });
+
 }

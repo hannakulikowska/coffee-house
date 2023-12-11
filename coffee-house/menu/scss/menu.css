@@ -409,7 +409,6 @@ ul {
   color: #E1D4C9;
   background: #665F55;
   border: 1px solid #665F55;
-  pointer-events: none;
 }
 
 .menu__tabs .menu__tab.active svg rect {
@@ -810,23 +809,25 @@ ul {
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
-.tab:hover {
-  background-color: #665F55;
-  color: #E1D4C9;
-}
-.tab:hover .circle {
-  background-color: #E1D4C9;
-}
-.tab:hover .tab-text {
-  color: #E1D4C9;
+@media (hover: hover) {
+  .tab:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+  }
+  .tab:hover .circle {
+    background-color: #E1D4C9;
+  }
+  .tab:hover .tab-text {
+    color: #E1D4C9;
+  }
 }
 
 .tab.active {
   height: 46px;
   background-color: #665F55;
   border: 1px solid #665F55;
-  pointer-events: none;
   transition: 0.5s ease-in-out;
+  cursor: default;
 }
 
 .modal .tab.active .circle {

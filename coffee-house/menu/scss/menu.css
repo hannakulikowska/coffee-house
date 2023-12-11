@@ -821,7 +821,7 @@ ul {
   color: #E1D4C9;
 }
 
-.modal .tab.active {
+.tab.active {
   height: 46px;
   background-color: #665F55;
   border: 1px solid #665F55;

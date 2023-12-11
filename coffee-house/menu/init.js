@@ -3,11 +3,11 @@ import { updateLoadMoreButton } from './load.js';
 import { handleCards } from './modal.js';
 
 
-// 1. Chrome
+// 1. import (Chrome)
 // import productsJSON from './data/products.json' assert { type: 'json'};
 // console.log(productsJSON);
 
-// 2. Chrome, Mozilla (fetch)
+//! 2. fetch (Chrome, Mozilla )
 fetch('./data/products.json')
   .then((res) => res.json())
   // .then(console.log)
@@ -16,6 +16,8 @@ fetch('./data/products.json')
 
     // coffee category displays by default
     displayProducts(products, 'coffee');
+
+    // ! Category Tabs 
 
     const menuTabs = document.querySelectorAll('.menu__tab');
     // console.log(menuTabs);

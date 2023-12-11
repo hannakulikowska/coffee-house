@@ -12,6 +12,8 @@ export function displayProducts(products, category) {
   filteredProducts.forEach(product => {
     const card = document.createElement('li');
     card.classList.add('cards-menu__card');
+    // Set the data-id attribute for every card
+    card.dataset.id = product.name;
 
     const imageSrc = product.image ? product.image : '../assets/img/';
     

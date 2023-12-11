@@ -1,5 +1,6 @@
 import { displayProducts } from './menu.js';
 import { updateLoadMoreButton } from './load.js';
+import { handleCards } from './modal.js';
 
 
 // 1. Chrome
@@ -30,12 +31,13 @@ fetch('./data/products.json')
         // console.log('Category:', category);
         // Display products of the selected category
         displayProducts(products, category);
-        
+
         document.querySelector('.cards-menu').classList.remove('all-products');
         updateLoadMoreButton();
       });
     });
-  
+    
+    handleCards(products);
   })
   .catch((error) => {
     console.error('Error loading data:', error);

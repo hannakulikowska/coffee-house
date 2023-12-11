@@ -22,35 +22,7 @@
       gap: 16px;
     }
 
-    &--active {
-      color: $text-light;
-      background: $background-container;
-      border-radius: 100px;
-      border: 1px solid $background-container;
-      display: flex;
-      padding: 8px 16px 8px 8px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-
-      @media screen and (max-width: 369px) {
-        padding: 1px;
-      }
-
-      & span {
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%;
-
-        @media screen and (max-width: 369px) {
-          display: none;
-        }
-      }
-    }
-
-    &--inactive {
+    .menu__tab {
       color: $text-dark;
       background: $background-body;
       border-radius: 100px;
@@ -62,6 +34,10 @@
       gap: 8px;
       transition: all 0.7s ease-in-out;
       cursor: pointer;
+
+      .tab--icon svg rect {
+        fill: #C1B6AD;
+      }
 
       @media screen and (max-width: 369px) {
         padding: 1px;
@@ -81,6 +57,7 @@
 
       & svg rect {
         transition: all 0.7s ease-in-out;
+        fill: #C1B6AD;
       }
 
       @media (hover: hover) and (pointer: fine) {
@@ -98,13 +75,17 @@
   }
 }
 
-.tabs--icon.active svg rect {
+.menu__tab.active {
+  color: $text-light;
+  background: $background-container;
+  border: 1px solid $background-container;
+  pointer-events: none;
+}
+
+.menu__tabs .menu__tab.active svg rect {
   fill: #E1D4C9;
 }
 
-.tabs--icon.inactive svg rect {
-  fill: #C1B6AD;
-}
 
 
 //! CARDS
@@ -155,38 +136,6 @@
       flex-shrink: 0;
       transition: all 0.7s ease;
     }
-
-    .coffee-1 {
-      background: url(../../assets/img/coffee-1.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-2 {
-      background: url(../../assets/img/coffee-2.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-3 {
-      background: url(../../assets/img/coffee-3.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-4 {
-      background: url(../../assets/img/coffee-4.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-5 {
-      background: url(../../assets/img/coffee-5.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-6 {
-      background: url(../../assets/img/coffee-6.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-7 {
-      background: url(../../assets/img/coffee-7.jpg), lightgray 50% / cover no-repeat;
-    }
-
-    .coffee-8 {
-      background: url(../../assets/img/coffee-8.jpg), lightgray 50% / cover no-repeat;
-    }
   }
 
   &__description {
@@ -220,29 +169,14 @@
   }
 }
 
-.refresh {
-  display: none;
-  margin: 0 auto;
-  width: 60px;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  border: 1px solid $border-dark;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 899px) {
-  .cards-menu__card.hidden {
-    display: none;
-  }
-
+@media screen and (max-width: 768px) {
   .cards-menu {
-    margin-bottom: 40px;
-  }
+    height: 1052px;
+    overflow-y: hidden;
 
-  .refresh {
-    display: flex;
+    @media screen and (max-width: 739px) {
+      height: 2144px;
+    }
   }
 
   .menu__title.title {
@@ -252,4 +186,24 @@
   .footer .title {
     margin-bottom: 0;
   }
+}
+
+@media screen and (max-width: 1440px) {
+  .cards-menu.all-products {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
+// ! 'Load more' button
+.load-more {
+  display: none;
+  margin: 40px auto 0;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  cursor: pointer;
 }

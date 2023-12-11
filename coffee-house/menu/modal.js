@@ -57,7 +57,7 @@ export function handleCards(products) {
         <div class="wrapper additives">
           <p class="text">Additives</p>
           <div class="tabs additives-tabs-container">
-            <button class="tab additive-tab tab-1">
+            <button class="tab additive-tab">
               <span class="circle">1</span>
               <span class="tab-text">${selectedProduct.additives[0].name}</span>
             </button>
@@ -153,6 +153,7 @@ export function handleCards(products) {
       tab.addEventListener('click', function () {
         sizeTabs.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
+        calculateTotalAmount(selectedProduct);
       })
     })
 
@@ -162,52 +163,95 @@ export function handleCards(products) {
 
     // вариант 1
     // const additivesTabsContainer = document.querySelector('.additives-tabs-container');
-
     // additivesTabsContainer.addEventListener('click', function (event) {
     //   const clickedTab = event.target.closest('.additive-tab');
-      
     //   if (!clickedTab) {
     //     return;
     //   }
-
     //   clickedTab.classList.toggle('active');
     // });
 
 
-
     // вариант 2
-    const additivesTabsContainer = document.querySelector('.additives-tabs-container');
-
-    additivesTabsContainer.addEventListener('click', function (event) {
-      const clickedTab = event.target.closest('.additive-tab');
-      
-      if (!clickedTab) {
-        return;
-      }
-
-    const isActive = clickedTab.classList.contains('active');
-    
-    if (isActive) {
-      clickedTab.classList.remove('active');
-    } else {
-      clickedTab.classList.add('active');
-    }
-  });
-
-
-    
-    // вариант 3
     // const additivesTabs = document.querySelectorAll('.additive-tab');
     // additivesTabs.forEach(tab => {
     //   tab.addEventListener('click', function () {
     //     this.classList.toggle('active');
     //   });
     // });
-   
 
 
+    // вариант 3
+        var tabs = document
+        .querySelector('.additives-tabs-container')
+        .querySelectorAll(".tab");
+
+    function wrapper (fn) {
+      var tapped = false;
+      return (event) => {
+        // console.log("CALLED");
+        fn(event, tapped);
+        tapped = !tapped;
+      }
+    }
+
+    var toggler = wrapper(handleTabClick);
+
+    function handleTabClick (event, tapped) {
+      const target = event.currentTarget;
+      // console.log(tapped, "WORK");
+      if (tapped) {
+        target.classList.remove("active");
+      } else {
+        target.classList.add("active");
+      }
+      calculateTotalAmount(selectedProduct);
+    }
+    
+    tabs.forEach((tab) => tab.addEventListener("click", wrapper(handleTabClick)));
 
 
+    
+    // ! Set attributes to tabs    
+
+    // Set attributes data- for sizes tabs
+    sizeTabs.forEach((sizeTab, index) => {
+      sizeTab.dataset.size = Object.keys(selectedProduct.sizes)[index];
+    });
+
+    // Set attributes data- for additives tabs
+    const additiveTabs = document.querySelectorAll('.additive-tab');
+    additiveTabs.forEach((additiveTab, index) => {
+      additiveTab.dataset.index = index;
+    });
+
+
+    // ! Calculate total amount
+
+    function calculateTotalAmount(selectedProduct) {
+      // Get the active size tab
+      const activeSizeTab = document.querySelector('.size-tab.active');
+      const sizeKey = activeSizeTab.dataset.size;
+      const selectedSize = selectedProduct.sizes[sizeKey];
+
+      // Get all active additive tabs
+      const activeAdditiveTabs = document.querySelectorAll('.additive-tab.active');
+      
+      // Sum up the cost of size and additives
+      let totalAmount = parseFloat(selectedProduct.price) + parseFloat(selectedSize['add-price']);
+
+      activeAdditiveTabs.forEach(activeAdditiveTab => {
+        const additiveIndex = activeAdditiveTab.dataset.index;
+        const selectedAdditive = selectedProduct.additives[additiveIndex];
+        totalAmount += parseFloat(selectedAdditive['add-price']);
+      });
+
+      // Display the result on the page
+      const totalAmountElement = document.getElementById('total-amount');
+      totalAmountElement.textContent = `$${totalAmount.toFixed(2)}`;
+    }
+
+    calculateTotalAmount(selectedProduct);
 
 
   }

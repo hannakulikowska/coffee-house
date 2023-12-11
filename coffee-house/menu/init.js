@@ -7,7 +7,7 @@ import { handleCards } from './modal.js';
 // import productsJSON from './data/products.json' assert { type: 'json'};
 // console.log(productsJSON);
 
-//! 2. fetch (Chrome, Mozilla )
+//! 2. fetch (Chrome, Mozilla)
 fetch('./data/products.json')
   .then((res) => res.json())
   // .then(console.log)

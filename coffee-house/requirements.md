@@ -123,12 +123,12 @@
 - [x] When changing the screen width, the product display mode (8 products per page or 4 products with a **Load More** button) changes without page reloading: +4
 
 **4. The Modal on the `menu` page: +20**
-- [ ] The Modal with the description of a specific product opens when clicking on any part of a card of product: +2
-- [ ] The part of the page outside the Modal is darkened: +2
-- [ ] When the Modal is open, the vertical scroll of the page becomes inactive; when closed, it becomes active again: +2
-- [ ] Clicking on the area around the Modal and **Close** button closes it: +2
+- [x] The Modal with the description of a specific product opens when clicking on any part of a card of product: +2
+- [x] The part of the page outside the Modal is darkened: +2
+- [x] When the Modal is open, the vertical scroll of the page becomes inactive; when closed, it becomes active again: +2
+- [x] Clicking on the area around the Modal and **Close** button closes it: +2
 - [ ] The Modal is centered on both axes, sizes of modal elements and their layout match the design: +2
-- [ ] After the Modal is opened, the 'Size' option 'S' is selected, and no option in the 'Additives' section is selected. The product's final price is the same as in the card: +2
+- [x] After the Modal is opened, the 'Size' option 'S' is selected, and no option in the 'Additives' section is selected. The product's final price is the same as in the card: +2
 - [ ] Only one 'Size' option can be selected. Changing this option also changes the final price of the product based on the choice (+$0.00 for **S**, +$0.50 for **M**, +$1.00 for **L**): +4
 - [ ] Multiple 'Additives' options can be selected, and each selected option increases the final price of the product by $0.50: +4
   

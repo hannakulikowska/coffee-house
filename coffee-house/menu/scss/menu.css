@@ -713,6 +713,16 @@ ul {
   background: #E1D4C9;
   gap: 20px;
 }
+@media screen and (max-width: 904px) {
+  .modal {
+    width: 688px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 342px;
+  }
+}
 
 .modal .box {
   width: 310px;
@@ -722,6 +732,11 @@ ul {
   align-items: center;
   overflow: hidden;
   border-radius: 40px;
+}
+@media screen and (max-width: 767px) {
+  .modal .box {
+    display: none;
+  }
 }
 
 .modal-image {

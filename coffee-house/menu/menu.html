@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,57 +13,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/inter?styles=29141" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
 
     <!-- Header Start -->
 
     <header class="header">
-      <a class="logo" href="../index.html">
+      <a class="logo-link" href="../index.html">
         <img class="header__logo" src="../assets/svg/logo.svg" alt="Coffee House Logo">
       </a>
-      <nav>
-        <ul class="header__nav">
-          <li class="nav__item">
-            <a class="nav-link" href="../index.html#favorite-coffee">Favorite coffee</a>
-            <span class="nav-link--underline"></span>
-          </li>
-          <li class="nav__item">
-            <a class="nav-link" href="../index.html#about">About</a>
-            <span class="nav-link--underline"></span>
-          </li>
-          <li class="nav__item">
-            <a class="nav-link" href="../index.html#mobile-app">Mobile app</a>
-            <span class="nav-link--underline"></span>
-          </li>
-          <li class="nav__item">
-            <a class="nav-link" href="#contact-us">Contact us</a>
-            <span class="nav-link--underline"></span>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__menu">
-        <span>Menu</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path
-            d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
-            stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341V5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
-            stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333V4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
-            stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
-            stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+
+      <div class="wrapper">
+        <nav>
+          <ul class="header__nav">
+            <li class="nav__item">
+              <a class="nav-link navigation" href="../index.html#favorite-coffee">Favorite coffee</a>
+              <span class="link--underline"></span>
+            </li>
+            <li class="nav__item">
+              <a class="nav-link navigation" href="../index.html#about">About</a>
+              <span class="link--underline"></span>
+            </li>
+            <li class="nav__item">
+              <a class="nav-link navigation" href="../index.html#mobile-app">Mobile app</a>
+              <span class="link--underline"></span>
+            </li>
+            <li class="nav__item">
+              <a class="nav-link navigation" href="#contact-us">Contact us</a>
+              <span class="link--underline"></span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__menu">
+          <div class="menu__wrapper">
+            <a class="menu__link navigation" href="#" onclick="handleInactiveLinkClick()">
+              <span>Menu</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
+                  stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341V5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
+                  stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333V4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
+                  stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
+                  stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <span class="link--underline"></span>
+        </div>
       </div>
 
       <div class="burger-menu">
         <div class="burger-menu__wrapper">
-          <span class="burger-menu__line line--line-1"></span>
-          <span class="burger-menu__line line--line-2"></span>
+          <span class="burger-menu__line--top"></span>
+          <span class="burger-menu__line--bottom"></span>
         </div>
       </div>
     </header>
@@ -75,24 +86,28 @@
 
       <section class="menu">
         <h1 class="menu__title title">Behind each of our cups hides an <span>amazing surprise</span></h1>
+
+        <!-- ! Tabs  -->
+
         <div class="menu__tabs">
-          <button class="menu__tabs--active active">
-            <svg class="tabs--icon active" width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect x="0.5" width="30" height="30" rx="15" fill="#E1D4C9" />
-                <path d="M7.5 23.12H23.5V7.12H7.5V23.12Z" fill="url(#pattern0)" />
-                <defs>
-                  <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_29587_2389" transform="scale(0.015625)" />
-                  </pattern>
-                  <image id="image0_29587_2389" width="64" height="64"
-                    xlink:href="data:image/png;base64,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" />
-                </defs>
+          <button class="menu__tab active" data-category="coffee">
+            <svg class="tab--icon" width="31" height="30" viewBox="0 0 31 30" fill="none"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect x="0.5" width="30" height="30" rx="15" fill="#E1D4C9" />
+              <path d="M7.5 23.12H23.5V7.12H7.5V23.12Z" fill="url(#pattern0)" />
+              <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_29587_2389" transform="scale(0.015625)" />
+                </pattern>
+                <image id="image0_29587_2389" width="64" height="64"
+                  xlink:href="data:image/png;base64,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" />
+              </defs>
             </svg>
-            <span>Coffee</span></button>
-          <button class="menu__tabs--inactive inactive">
-            <svg class="tabs--icon inactive" width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
+            <span>Coffee</span>
+          </button>
+          <button class="menu__tab" data-category="tea">
+            <svg class="tab--icon" width="31" height="30" viewBox="0 0 31 30" fill="none"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect x="0.5" width="30" height="30" rx="15" fill="#C1B6AD" />
               <path d="M7.5 23.12H23.5V7.12H7.5V23.12Z" fill="url(#pattern1)" />
               <defs>
@@ -105,9 +120,9 @@
             </svg>
             <span>Tea</span>
           </button>
-          <button class="menu__tabs--inactive inactive">
-            <svg class="tabs--icon inactive" width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
+          <button class="menu__tab" data-category="dessert">
+            <svg class="tab--icon" width="31" height="30" viewBox="0 0 31 30" fill="none"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect x="0.5" width="30" height="30" rx="15" fill="#C1B6AD" />
               <path d="M7.5 23.12H23.5V7.12H7.5V23.12Z" fill="url(#pattern3)" />
               <defs>
@@ -122,14 +137,15 @@
           </button>
         </div>
 
-        <!--! Cards -->
+        <!-- ! Cards -->
 
-        <ul class="cards-menu">
+        <ul class="cards-menu" id="menu-container">
           <li class="cards-menu__card">
             <div class="card__image"><span class="coffee-1"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Irish coffee</h3>
-              <p class="card__description--content medium">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+              <p class="card__description--content medium">Fragrant black coffee with Jameson Irish whiskey and whipped
+                milk</p>
               <p class="card__description--price heading-3">$7.00</p>
             </div>
           </li>
@@ -137,7 +153,8 @@
             <div class="card__image"><span class="coffee-2"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Kahlua coffee</h3>
-              <p class="card__description--content medium">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+              <p class="card__description--content medium">Classic coffee with milk and Kahlua liqueur under a cap of
+                frothed milk</p>
               <p class="card__description--price heading-3">$7.00</p>
             </div>
           </li>
@@ -153,11 +170,12 @@
             <div class="card__image"><span class="coffee-4"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Ice cappuccino</h3>
-              <p class="card__description--content medium">Cappuccino with soft thick foam in summer version with ice</p>
+              <p class="card__description--content medium">Cappuccino with soft thick foam in summer version with ice
+              </p>
               <p class="card__description--price heading-3">$5.00</p>
             </div>
           </li>
-          <li class="cards-menu__card hidden">
+          <li class="cards-menu__card">
             <div class="card__image"><span class="coffee-5"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Espresso</h3>
@@ -165,15 +183,16 @@
               <p class="card__description--price heading-3">$4.50</p>
             </div>
           </li>
-          <li class="cards-menu__card hidden">
+          <li class="cards-menu__card">
             <div class="card__image"><span class="coffee-6"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Latte</h3>
-              <p class="card__description--content medium">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+              <p class="card__description--content medium">Espresso coffee with the addition of steamed milk and dense
+                milk foam</p>
               <p class="card__description--price heading-3">$5.50</p>
             </div>
           </li>
-          <li class="cards-menu__card hidden">
+          <li class="cards-menu__card">
             <div class="card__image"><span class="coffee-7"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Latte macchiato</h3>
@@ -181,7 +200,7 @@
               <p class="card__description--price heading-3">$5.50</p>
             </div>
           </li>
-          <li class="cards-menu__card hidden">
+          <li class="cards-menu__card">
             <div class="card__image"><span class="coffee-8"></span></div>
             <div class="card__description">
               <h3 class="card__description--title heading-3">Coffee with cognac</h3>
@@ -191,19 +210,20 @@
           </li>
         </ul>
 
-        <div class="refresh">
+        <div class="load-more">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
               d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
               stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </div>
       </section>
     </main>
 
     <!-- Main End-->
-    
+
     <!-- Footer Start-->
 
     <footer class="footer" id="contact-us">
@@ -240,10 +260,10 @@
           </a>
         </div>
       </div>
-    
+
       <div class="contacts-info">
         <h3 class="contacts-info__title">Contact us</h3>
-    
+
         <div class="contacts-info__contacts">
           <div class="contacts__item item--address">
             <a href="https://maps.app.goo.gl/Mvf5K4TLspr6eir59" target="_blank">
@@ -259,7 +279,7 @@
             </a>
             <span class="item--underline address--underline"></span>
           </div>
-    
+
           <div class="contacts__item item--phone-number">
             <a class="" href="tel:+16035550123">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -271,7 +291,7 @@
             </a>
             <span class="item--underline phone-number--underline"></span>
           </div>
-    
+
           <div class="item--open-hours">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <g clip-path="url(#clip0_217_1736)">
@@ -297,5 +317,9 @@
 
   </div>
 
+  <script src="../burger.js"></script>
+  <script type="module" src="init.js"></script>
+  <!-- <script src="load.js"></script> -->
 </body>
+
 </html>

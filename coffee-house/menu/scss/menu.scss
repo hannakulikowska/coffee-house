@@ -1,4 +1,4 @@
-@import '../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/normalize.css/normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import url('https://fonts.cdnfonts.com/css/inter');
 @import "mixins";
@@ -51,13 +51,13 @@ ul {
   max-width: 1440px;
   height: auto;
   margin: 0 auto;
-  padding: 20px 40px 40px;
+  padding: 0px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (width < 615px) {
-    padding: 20px 16px 40px;
+  @media screen and (max-width: 614px) {
+    padding: 0px 16px 40px;
   }
 }
 
@@ -67,7 +67,7 @@ ul {
   text-align: center;
   color: $text-dark;
   margin-bottom: 40px;
-  
+
   & span {
     font-style: italic;
     color: $text-accent;
@@ -98,3 +98,4 @@ ul {
 @import "burger-menu";
 @import "menu-cards";
 @import "footer";
+@import "modal";

@@ -73,7 +73,7 @@
 
   {
     "name": "Honey raf",
-    "image": "../../assets/img/coffee-3.jpg",
+    "image": "../assets/img/coffee-3.jpg",
     "description": "Espresso with frothed milk, cream and aromatic honey",
     "price": "5.50",
     "category": "coffee",

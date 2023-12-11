@@ -129,8 +129,8 @@
 - [x] Clicking on the area around the Modal and **Close** button closes it: +2
 - [x] The Modal is centered on both axes, sizes of modal elements and their layout match the design: +2
 - [x] After the Modal is opened, the 'Size' option 'S' is selected, and no option in the 'Additives' section is selected. The product's final price is the same as in the card: +2
-- [ ] Only one 'Size' option can be selected. Changing this option also changes the final price of the product based on the choice (+$0.00 for **S**, +$0.50 for **M**, +$1.00 for **L**): +4
-- [ ] Multiple 'Additives' options can be selected, and each selected option increases the final price of the product by $0.50: +4
+- [x] Only one 'Size' option can be selected. Changing this option also changes the final price of the product based on the choice (+$0.00 for **S**, +$0.50 for **M**, +$1.00 for **L**): +4
+- [x] Multiple 'Additives' options can be selected, and each selected option increases the final price of the product by $0.50: +4
   
 **5. Video on the `home` page: +8**
    

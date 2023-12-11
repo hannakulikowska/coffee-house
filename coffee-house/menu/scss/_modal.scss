@@ -141,17 +141,19 @@
   transition: 0.5s ease-in-out;
   cursor: pointer;
 
-  &:hover {
-    background-color: $background-container;
-    color: $text-light;
-  }
+  @media (hover:hover) {
+    &:hover {
+      background-color: $background-container;
+      color: $text-light;
+    }
 
-  &:hover .circle {
-    background-color: $background-body;
-  }
+    &:hover .circle {
+      background-color: $background-body;
+    }
 
-  &:hover .tab-text {
-    color: $text-light;
+    &:hover .tab-text {
+      color: $text-light;
+    }
   }
 }
 
@@ -159,8 +161,8 @@
   height: 46px;
   background-color: $background-container;
   border: 1px solid $background-container;
-  pointer-events: none;
   transition: 0.5s ease-in-out;
+  cursor: default;
 }
 
 .modal .tab.active .circle {

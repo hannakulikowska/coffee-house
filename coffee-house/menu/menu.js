@@ -54,4 +54,6 @@ export function displayProducts(products, category) {
     loadMoreProducts();
   });
 
+
+  
 }

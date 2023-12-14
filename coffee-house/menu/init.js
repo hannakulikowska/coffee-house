@@ -34,8 +34,9 @@ fetch('./data/products.json')
         // Display products of the selected category
         displayProducts(products, category);
 
-        document.querySelector('.cards-menu').classList.remove('all-products');
+        // document.querySelector('.cards-menu').classList.remove('all-products');
         updateLoadMoreButton();
+        
       });
     });
     

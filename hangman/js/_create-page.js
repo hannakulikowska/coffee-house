@@ -1,6 +1,7 @@
 export { createPage };
 import { createKeyboard } from "./_keyboard.js";
 import { canvasCreator } from "./_canvas.js";
+import { generateWord } from "./_words.js";
 
 // Create page
 function createPage() {
@@ -66,4 +67,5 @@ function createPage() {
 
   createKeyboard();
   canvasCreator();
+  generateWord();
 }

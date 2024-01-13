@@ -1,5 +1,6 @@
 export { createPage };
 import { createKeyboard } from "./_keyboard.js";
+import { canvasCreator } from "./_canvas.js";
 
 // Create page
 function createPage() {
@@ -64,4 +65,5 @@ function createPage() {
   newGameContainer.appendChild(newGameButton);
 
   createKeyboard();
+  canvasCreator();
 }

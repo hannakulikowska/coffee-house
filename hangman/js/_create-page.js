@@ -43,6 +43,11 @@ function createPage() {
   userInputSection.id = "user-input-section";
   guess.appendChild(userInputSection);
 
+  // create question
+  const question = document.createElement("p");
+  question.className = "question";
+  guess.appendChild(question);
+
   // create keyboard box
   const keyboard = document.createElement("div");
   keyboard.className = "keyboard";

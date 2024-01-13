@@ -89,19 +89,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 40px;
+  align-items: flex-start;
+  cursor: default;
 }
 
 #user-input-section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.2em;
   font-size: 2em;
   margin: 0.6em 0 1.2em 0;
   color: #ffffff;
-  cursor: default;
-  margin: auto;
+}
+
+.question {
+  font-weight: 300;
+  font-size: 1em;
+  color: #ffffff;
 }
 
 .hide {

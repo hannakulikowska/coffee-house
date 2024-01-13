@@ -1,4 +1,5 @@
 export { createPage };
+import { createKeyboard } from "./_keyboard.js";
 
 // Create page
 function createPage() {
@@ -61,4 +62,6 @@ function createPage() {
   newGameButton.id = "new-game-button";
   newGameButton.textContent = "Play again";
   newGameContainer.appendChild(newGameButton);
+
+  createKeyboard();
 }

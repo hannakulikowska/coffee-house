@@ -2,6 +2,7 @@ export { createPage };
 import { createKeyboard } from "./_keyboard.js";
 import { canvasCreator } from "./_canvas.js";
 import { generateWord } from "./_words.js";
+import { initializeGameLogic } from "./_game-logic.js";
 
 // Create page
 function createPage() {
@@ -73,4 +74,5 @@ function createPage() {
   createKeyboard();
   canvasCreator();
   generateWord();
+  initializeGameLogic();
 }

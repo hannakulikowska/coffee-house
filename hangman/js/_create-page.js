@@ -49,6 +49,11 @@ function createPage() {
   question.className = "question";
   guess.appendChild(question);
 
+  // create counter
+  const counter = document.createElement("p");
+  counter.className = "counter";
+  guess.appendChild(counter);
+
   // create keyboard box
   const keyboard = document.createElement("div");
   keyboard.className = "keyboard";

@@ -1,25 +1,21 @@
-import { capital } from "./_words.js";
+import { capital, updateLossCounter } from "./_words.js";
 
 let winCount = 0;
-let lossCount = 0;
+export let lossCount = 0;
 
 export const initializeGameLogic = () => {
-  winCount = 0;
-  lossCount = 0;
-
   const buttons = document.querySelectorAll(".letters");
   let charArray = capital.toUpperCase().split("");
   let dashes = document.getElementsByClassName("dashes");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      console.log("click on letter");
-
+      const clickedLetter = button.innerText.toUpperCase();
       // if array contains clciked letter, replace underscore with a letter. if no, draw parts of man
-      if (charArray.includes(button.innerText)) {
+      if (charArray.includes(clickedLetter)) {
         charArray.forEach((char, index) => {
           // if char in array is same as clicked button
-          if (char === button.innerText) {
+          if (char === clickedLetter) {
             // replace dash with letter
             dashes[index].innerText = char;
             winCount += 1;
@@ -32,6 +28,7 @@ export const initializeGameLogic = () => {
         button.disabled = true;
       } else {
         lossCount += 1;
+        updateLossCounter(lossCount);
         // lossCount is 6 => draw parts of man
         if (lossCount == 6) {
           resultText.innerHTML = `<h2 class='lose-msg'>You Lose!</h2><p>The word was <span>${capital}</span></p>`;

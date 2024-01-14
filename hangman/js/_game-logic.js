@@ -1,5 +1,5 @@
 import { capital, updateLossCounter } from "./_words.js";
-
+import { drawMan } from "./_draw-man.js";
 let winCount = 0;
 export let lossCount = 0;
 
@@ -29,6 +29,7 @@ export const initializeGameLogic = () => {
       } else {
         lossCount += 1;
         updateLossCounter(lossCount);
+        drawMan(lossCount);
         // lossCount is 6 => draw parts of man
         if (lossCount == 6) {
           resultText.innerHTML = `<h2 class='lose-msg'>You Lose!</h2><p>The word was <span>${capital}</span></p>`;

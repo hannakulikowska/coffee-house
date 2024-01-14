@@ -5,12 +5,12 @@ export function canvasCreator() {
   const canvas = document.getElementById("canvas");
   if (canvas) {
     context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
     context.beginPath();
     context.strokeStyle = "#ffffff";
     context.lineWidth = 2;
+    initialDrawing();
   }
-
-  initialDrawing();
 }
 
 // To reuse `context`

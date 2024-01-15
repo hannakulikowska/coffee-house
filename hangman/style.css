@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #000000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.page__container {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 60px;
+}
+
+.header {
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  letter-spacing: 3px;
+  cursor: default;
+  user-select: none;
+}
+
+.keyboard {
+  width: 100%;
+  max-width: 645px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 0 auto;
+}
+
+.letters {
+  height: 3em;
+  width: 3em;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.letters:disabled {
+  border: 1px solid #ffffff77;
+  color: #ffffff77;
+  cursor: default;
+}
+
+.new-game-popup {
+  background-color: #000000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.canvas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 80px;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 20px;
+  cursor: default;
+  user-select: none;
+}
+
+#user-input-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.2em;
+  font-size: 2em;
+  margin-bottom: 1.2em;
+  color: #ffffff;
+  
+  @media screen and (max-width: 600px) {
+    font-size: 1.4em;
+  }
+}
+
+.counter,
+.question {
+  font-weight: 300;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.question {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.hide {
+  display: none;
+}
+
+.win-msg,
+.lose-msg {
+  font-size: 1.8em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.word-msg {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+  color: #ffffff;
+}
+
+.capital-msg {
+  font-weight: 400;
+}
+
+#new-game-button {
+  font-size: 1.3em;
+  font-weight: 300;
+  padding: 0.5em 1em;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+}

@@ -65,7 +65,7 @@ export const initializeGameLogic = () => {
     if (!event.code.includes("Key")) {
       return;
     }
-    console.log(event.code);
+    // console.log(event.code);
 
     // find pressed key on the virtual keyboard
     const virtualButton = Array.from(buttons).find(

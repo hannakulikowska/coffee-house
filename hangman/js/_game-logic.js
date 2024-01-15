@@ -32,7 +32,7 @@ export const initializeGameLogic = () => {
           winCount += 1;
           // if winCount equals word lenfth
           if (winCount == charArray.length) {
-            resultText.innerHTML = `<h2 class='win-msg'>You Win!</h2><p>The word was <span>${capital}</span></p>`;
+            resultText.innerHTML = `<h2 class='win-msg'>You Win!</h2><p class="word-msg">The word was <span class="capital-msg">${capital}</span></p>`;
             endGame();
             setTimeout(newGame, 1000);
           }
@@ -45,7 +45,7 @@ export const initializeGameLogic = () => {
       drawMan(lossCount);
       // lossCount is 6 => draw parts of man
       if (lossCount == 6) {
-        resultText.innerHTML = `<h2 class='lose-msg'>You Lose!</h2><p>The word was <span>${capital}</span></p>`;
+        resultText.innerHTML = `<h2 class='lose-msg'>You Lose!</h2><p class="word-msg">The word was <span class="capital-msg">${capital}</span></p>`;
         endGame();
         setTimeout(newGame, 1000);
       }

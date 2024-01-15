@@ -33,10 +33,12 @@
 
 .header__title {
   font-weight: 300;
+  font-size: 2em;
   text-transform: uppercase;
   margin: 0 auto;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   cursor: default;
+  user-select: none;
 }
 
 .keyboard {
@@ -50,7 +52,7 @@
   margin: 0 auto;
 }
 
-.keyboard button {
+.letters {
   height: 3em;
   width: 3em;
   background-color: transparent;
@@ -59,7 +61,7 @@
   cursor: pointer;
 }
 
-.keyboard button:disabled {
+.letters:disabled {
   border: 1px solid #ffffff77;
   color: #ffffff77;
   cursor: default;
@@ -80,9 +82,10 @@
 
 .canvas-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  gap: 40px;
+  gap: 80px;
 }
 
 .guess-container {
@@ -92,6 +95,7 @@
   align-items: flex-start;
   gap: 20px;
   cursor: default;
+  user-select: none;
 }
 
 #user-input-section {
@@ -101,6 +105,10 @@
   font-size: 2em;
   margin-bottom: 1.2em;
   color: #ffffff;
+  
+  @media screen and (max-width: 600px) {
+    font-size: 1.4em;
+  }
 }
 
 .counter,
@@ -119,18 +127,20 @@
   display: none;
 }
 
-#result-text h2 {
+.win-msg,
+.lose-msg {
   font-size: 1.8em;
   text-align: center;
+  color: #ffffff;
 }
 
-#result-text p {
+.word-msg {
   font-size: 1.25em;
   margin: 1em 0 2em 0;
   color: #ffffff;
 }
 
-#result-text span {
+.capital-msg {
   font-weight: 400;
 }
 
@@ -142,9 +152,4 @@
   border: 1px solid #ffffff;
   color: #ffffff;
   cursor: pointer;
-}
-
-.win-msg,
-.lose-msg {
-  color: #ffffff;
 }

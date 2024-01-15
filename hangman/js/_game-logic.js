@@ -4,6 +4,7 @@ import { endGame } from "./_end-game.js";
 import { newGame } from "./_new-game.js";
 
 export let handleButtonClick = null;
+export let handleKeyPress = null;
 export let winCount;
 export let lossCount;
 
@@ -56,4 +57,13 @@ export const initializeGameLogic = () => {
   buttons.forEach((button) => {
     button.addEventListener("click", handleButtonClick);
   });
+
+  handleKeyPress = (event) => {
+    if (!event.code.includes("Key")) {
+      return;
+    }
+    console.log(event.code);
+  };
+
+  document.addEventListener("keypress", handleKeyPress);
 };

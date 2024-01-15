@@ -1,13 +1,13 @@
 import { generateWord, updateLossCounter } from "./_words.js";
 import { canvasCreator } from "./_canvas.js";
-import { lossCount } from "./_game-logic.js";
+import { lossCount, handleKeyPress } from "./_game-logic.js";
 import { initializeGameLogic } from "./_game-logic.js";
 import { handleButtonClick } from "./_game-logic.js";
 
 export const newGame = () => {
   const popup = document.querySelector(".new-game-popup");
   popup.classList.remove("hide");
-
+  document.removeEventListener("keypress", handleKeyPress);
   setupNewGameButton();
   initializeGameLogic();
 };

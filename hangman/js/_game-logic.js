@@ -59,10 +59,23 @@ export const initializeGameLogic = () => {
   });
 
   handleKeyPress = (event) => {
+    const pressedKey = event.key.toUpperCase();
+
+    // ignore all keystrokes, that are not letter key
     if (!event.code.includes("Key")) {
       return;
     }
     console.log(event.code);
+
+    // find pressed key on the virtual keyboard
+    const virtualButton = Array.from(buttons).find(
+      (button) => button.innerText.toUpperCase() === pressedKey
+    );
+
+    // if a button is found and not yet disabled, execute the game logic as if a virtual keyboard button had been pressed
+    if (virtualButton && !virtualButton.disabled) {
+      handleButtonClick({ target: virtualButton });
+    }
   };
 
   document.addEventListener("keypress", handleKeyPress);

@@ -1,4 +1,4 @@
-import { handleButtonClick, handleKeyPress } from "./_game-logic.js";
+import { handleButtonClick, handleKeyPress } from "./game-logic.js";
 
 export const endGame = () => {
   const letterButtons = document.querySelectorAll(".letters");

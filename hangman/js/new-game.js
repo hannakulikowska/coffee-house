@@ -1,8 +1,8 @@
-import { generateWord, updateLossCounter } from "./_words.js";
-import { canvasCreator } from "./_canvas.js";
-import { lossCount, handleKeyPress } from "./_game-logic.js";
-import { initializeGameLogic } from "./_game-logic.js";
-import { handleButtonClick } from "./_game-logic.js";
+import { generateWord, updateLossCounter } from "./words.js";
+import { canvasCreator } from "./canvas.js";
+import { lossCount, handleKeyPress } from "./game-logic.js";
+import { initializeGameLogic } from "./game-logic.js";
+import { handleButtonClick } from "./game-logic.js";
 
 export const newGame = () => {
   const popup = document.querySelector(".new-game-popup");

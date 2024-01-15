@@ -5,7 +5,7 @@ import {
   rightArm,
   leftLeg,
   rightLeg,
-} from "./_draw-parts.js";
+} from "./draw-parts.js";
 
 export const drawMan = (lossCount) => {
   switch (lossCount) {

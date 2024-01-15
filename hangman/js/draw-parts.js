@@ -1,4 +1,4 @@
-import { getContext, drawLine } from "./_canvas.js";
+import { getContext, drawLine } from "./canvas.js";
 
 export const head = () => {
   const context = getContext();

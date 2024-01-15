@@ -1,7 +1,7 @@
-import { capital, updateLossCounter } from "./_words.js";
-import { drawMan } from "./_draw-man.js";
-import { endGame } from "./_end-game.js";
-import { newGame } from "./_new-game.js";
+import { capital, updateLossCounter } from "./words.js";
+import { drawMan } from "./draw-man.js";
+import { endGame } from "./end-game.js";
+import { newGame } from "./new-game.js";
 
 export let handleButtonClick = null;
 export let handleKeyPress = null;
